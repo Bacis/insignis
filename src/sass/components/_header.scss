@@ -88,7 +88,8 @@ header {
 
 .scroll-magic {
     .header-text {
-        text-align: center;
+        position: relative;
+        padding-top: 50%;
 
         .main-header {
             font-family: Roboto-Bold;
@@ -97,6 +98,9 @@ header {
             letter-spacing: 0;
             text-align: center;
             line-height: 100px;
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
         }
     }
 
@@ -106,7 +110,8 @@ header {
 }
 
 .tween {
-    position: relative;
+    position: absolute;
+    opacity: 0;
     width: 200px;
     height: 120px;
     background-color: white;

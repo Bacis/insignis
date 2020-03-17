@@ -4,56 +4,31 @@ import * as ScrollMagic from 'scrollmagic'
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
 import { ReactComponent as Logo } from './assets/images/insignis-logo.svg'
 import { ReactComponent as ContactUs } from './assets/images/contact-us.svg'
-import { ReactComponent as BrandIdentities } from './assets/images/brand-identities.svg'
 import { ReactComponent as Websites } from './assets/images/websites.svg'
 import { ReactComponent as AndMore } from './assets/images/more.svg'
+import Hero from './components/Hero'
+import Brand from './components/Brand'
 import './sass/main.scss'
 
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax, Back)
+TweenMax.defaultOverwrite = false
 
 function App() {
-  const [backgroundColor, setBackgroundColor] = useState('default')
+  const controller = new ScrollMagic.Controller()
+  const [backgroundColor, setBackgroundColor] = useState('')
 
   useEffect(() => {
-    const controller = new ScrollMagic.Controller()
-    const brandTimeline = new TimelineMax()
-    const brandTween = TweenMax.fromTo(
-      '#brand-tween',
-      3,
-      { y: 300, x: 500, width: 200, height: 120, opacity: 0 },
-      { y: 0, x: 100, width: 300, height: 190, opacity: 1 }
-    )
-
-    const brandTween1 = TweenMax.fromTo(
-      '#brand-tween1',
-      5,
-      { x: 500, y: 350, width: 200, height: 120, opacity: 0 },
-      { x: 800, y: -100, width: 300, height: 190, opacity: 1, delay: 1 }
-    )
-
-    const brandTween2 = TweenMax.fromTo(
-      '#brand-tween2',
-      5,
-      { x: 500, y: 400, width: 200, height: 120, opacity: 0 },
-      { x: 1200, y: 800, width: 300, height: 190, opacity: 1, delay: 2 }
-    )
-
-    brandTimeline.add([brandTween, brandTween1, brandTween2])
-
-    new ScrollMagic.Scene({
-      triggerElement: '#brand',
-      duration: 1200,
-      offset: 400,
-    })
-      .setPin('#brand-pin')
-      .setTween(brandTimeline)
-      .addTo(controller)
     new ScrollMagic.Scene({
       triggerElement: '#websites',
       duration: 600,
-      offset: 400,
     })
-      .setPin('#websites')
+      .setPin('#website-pin')
+      .addTo(controller)
+    new ScrollMagic.Scene({
+      triggerElement: '#and-more',
+      duration: 600,
+    })
+      .setPin('#and-more-pin')
       .addTo(controller)
   }, [])
 
@@ -80,28 +55,22 @@ function App() {
       </header>
       <section className="scroll-magic">
         <div className="row">
-          <div id="hero" className="header-text">
-            <div className="main-header">
-              We are a group of independent designers and developers focused on
-              creating outstanding
-            </div>
-          </div>
-          <div id="brand" className="brand-text">
-            <div
-              id="brand-tween"
-              className="tween"
-              onMouseEnter={() => setBackgroundColor('blue')}
-              onMouseLeave={() => setBackgroundColor('')}
-            />
-            <div id="brand-tween1" className="tween" />
-            <div id="brand-tween2" className="tween" />
-            <div id="brand-pin">
-              <BrandIdentities />
-            </div>
-          </div>
+          <Hero
+            title="We are a group of independent designers and developers focused on
+              creating outstanding"
+          />
+          <Brand
+            setBackgroundColor={setBackgroundColor}
+            controller={controller}
+          />
           <div id="websites" className="brand-text">
-            <div className="identities">
+            <div id="website-pin">
               <Websites />
+            </div>
+          </div>
+          <div id="and-more" className="brand-text">
+            <div id="and-more-pin">
+              <AndMore />
             </div>
           </div>
         </div>

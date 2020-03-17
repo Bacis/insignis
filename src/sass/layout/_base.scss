@@ -40,8 +40,17 @@ body {
 
 .default {
     background: black;
+    transition: background ease-out 0.5s;
 }
 
 .blue {
     background: cornflowerblue !important;
+}
+
+.orange {
+    background: darkorange !important;
+}
+
+.red {
+    background: crimson !important;
 }
