@@ -1,0 +1,114 @@
+header {
+    .top-menu {
+        position: fixed;
+        width: 100%;
+
+        ol {
+            margin: auto;
+            width: $grid-width;
+
+            li {
+                display: inline-block;
+                margin-top: 30px;
+            }
+    
+            .logo {
+                float: left;
+                overflow-x: hidden;            
+                animation-name: reduceWidth;
+                animation-duration: 0.5s;
+                animation-timing-function: ease-out;
+    
+                svg {
+                    animation-name: moveInLeft;
+                    animation-duration: 0.5s;
+                    transform: translateX(-185px);
+    
+                    path {
+                        opacity: 1;
+                    }
+                }
+    
+                svg:hover {
+                    animation-name: moveOutLeft;
+                    animation-duration: 0.5s;
+                    animation-timing-function: ease-out;
+    
+                    transform: translateX(0);
+    
+                    path {
+                        opacity: 1;
+                    }
+                }
+            }    
+        }
+
+        .contact-us {
+            float: right;
+
+            svg {
+                height: 60px;
+            }
+        }
+
+        .logo:hover {
+            width: 250px;
+        }
+    }
+
+    .side-menu {
+        position: fixed;
+        right: 0;
+        top: 40%;
+
+        ol.right {
+            list-style: none;
+            font-size: 27px;
+
+            li {
+                cursor: pointer;
+                overflow-x: hidden;
+                letter-spacing: 15px;
+                margin: 26px;
+                width: 30px;
+                animation-name: reduceWidth;
+                animation-duration: 0.5s;
+                animation-timing-function: ease-out;
+            }
+
+            li:hover {
+                letter-spacing: normal;
+                animation-name: increaseWidth;
+                animation-duration: 1s;
+                animation-timing-function: ease-out;
+            }
+        }
+    }
+}
+
+.scroll-magic {
+    .header-text {
+        text-align: center;
+
+        .main-header {
+            font-family: Roboto-Bold;
+            font-size: 90px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 100px;
+        }
+    }
+
+    .brand-text {
+        text-align: center;
+    }
+}
+
+.tween {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    background-color: white;
+    transition: opacity;
+}
