@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { TweenMax, TimelineMax, Back } from 'gsap'
 import * as ScrollMagic from 'scrollmagic'
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
-import { ReactComponent as Logo } from './assets/images/insignis-logo.svg'
-import { ReactComponent as ContactUs } from './assets/images/contact-us.svg'
 import { ReactComponent as Websites } from './assets/images/websites.svg'
 import { ReactComponent as AndMore } from './assets/images/more.svg'
+import TopMenu from './components/TopMenu'
 import Hero from './components/Hero'
 import Brand from './components/Brand'
 import './sass/main.scss'
@@ -35,16 +34,7 @@ function App() {
   return (
     <div className={`App default ${backgroundColor}`}>
       <header className="App-header">
-        <div className="top-menu">
-          <ol>
-            <li className="logo">
-              <Logo />
-            </li>
-            <li className="contact-us">
-              <ContactUs />
-            </li>
-          </ol>
-        </div>
+        <TopMenu />
         <div className="side-menu">
           <ol className="right">
             <li>Works</li>

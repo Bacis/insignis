@@ -2,6 +2,7 @@ header {
     .top-menu {
         position: fixed;
         width: 100%;
+        z-index: 100;
 
         ol {
             margin: auto;
@@ -14,22 +15,31 @@ header {
     
             .logo {
                 float: left;
-                overflow-x: hidden;            
-                animation-name: reduceWidth;
-                animation-duration: 0.5s;
-                animation-timing-function: ease-out;
+                overflow-x: hidden;
     
                 svg {
-                    animation-name: moveInLeft;
-                    animation-duration: 0.5s;
                     transform: translateX(-185px);
     
                     path {
                         opacity: 1;
                     }
                 }
-    
-                svg:hover {
+            }
+
+            .inactive {
+                svg {
+                    animation-name: moveInLeft;
+                    animation-duration: 0.5s;
+                    animation-timing-function: ease-out;
+
+                    path {
+                        opacity: 1;
+                    }
+                }
+            }
+            
+            .active {
+                svg {
                     animation-name: moveOutLeft;
                     animation-duration: 0.5s;
                     animation-timing-function: ease-out;
@@ -40,7 +50,7 @@ header {
                         opacity: 1;
                     }
                 }
-            }    
+            }
         }
 
         .contact-us {
@@ -99,6 +109,7 @@ header {
             text-align: center;
             line-height: 100px;
             position: absolute;
+            z-index: 90;
             top: 50%;
             transform: translate(0%, -50%);
         }

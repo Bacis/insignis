@@ -1,0 +1,26 @@
+import React, { useState } from 'react'
+import { ReactComponent as Logo } from '../assets/images/insignis-logo.svg'
+import { ReactComponent as ContactUs } from '../assets/images/contact-us.svg'
+
+const TopMenu = () => {
+  const [logoHover, setLogoHover] = useState('')
+
+  return (
+    <div className="top-menu">
+      <ol>
+        <li
+          className={`logo ${logoHover}`}
+          onMouseEnter={() => setLogoHover('active')}
+          onMouseLeave={() => setLogoHover('inactive')}
+        >
+          <Logo />
+        </li>
+        <li className="contact-us">
+          <ContactUs />
+        </li>
+      </ol>
+    </div>
+  )
+}
+
+export default TopMenu

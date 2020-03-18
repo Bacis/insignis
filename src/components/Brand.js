@@ -101,12 +101,10 @@ const Brand = props => {
 
 Brand.propTypes = {
   setBackgroundColor: PropTypes.func.isRequired,
-  controller: PropTypes.arrayOf(
-    PropTypes.shape({
-      addScene: PropTypes.func.isRequired,
-      removeScene: PropTypes.func.isRequired,
-    })
-  ).isRequired,
+  controller: PropTypes.shape({
+    addScene: PropTypes.func.isRequired,
+    removeScene: PropTypes.func.isRequired,
+  }).isRequired,
 }
 
 export default Brand
