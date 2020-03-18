@@ -5,6 +5,7 @@ import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
 import { ReactComponent as Websites } from './assets/images/websites.svg'
 import { ReactComponent as AndMore } from './assets/images/more.svg'
 import TopMenu from './components/TopMenu'
+import SideMenu from './components/SideMenu'
 import Hero from './components/Hero'
 import Brand from './components/Brand'
 import './sass/main.scss'
@@ -35,13 +36,7 @@ function App() {
     <div className={`App default ${backgroundColor}`}>
       <header className="App-header">
         <TopMenu />
-        <div className="side-menu">
-          <ol className="right">
-            <li>Works</li>
-            <li>Vision</li>
-            <li>Contact</li>
-          </ol>
-        </div>
+        <SideMenu />
       </header>
       <section className="scroll-magic">
         <div className="row">

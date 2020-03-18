@@ -68,28 +68,27 @@ header {
 
     .side-menu {
         position: fixed;
+        z-index: 100;
         right: 0;
         top: 40%;
 
         ol.right {
             list-style: none;
             font-size: 27px;
+            width: 45px;
+            margin-right: 25px;
+            overflow-x: hidden;
 
             li {
+
                 cursor: pointer;
-                overflow-x: hidden;
-                letter-spacing: 15px;
                 margin: 26px;
                 width: 30px;
-                animation-name: reduceWidth;
-                animation-duration: 0.5s;
-                animation-timing-function: ease-out;
             }
 
-            li:hover {
-                letter-spacing: normal;
-                animation-name: increaseWidth;
-                animation-duration: 1s;
+            li.active {
+                animation: slideOutLeft;
+                animation-duration: 0.5s;
                 animation-timing-function: ease-out;
             }
         }
