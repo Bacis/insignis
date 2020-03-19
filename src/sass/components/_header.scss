@@ -99,19 +99,6 @@ header {
     .header-text {
         position: relative;
         padding-top: 50%;
-
-        .main-header {
-            font-family: Roboto-Bold;
-            font-size: 90px;
-            color: #FFFFFF;
-            letter-spacing: 0;
-            text-align: center;
-            line-height: 100px;
-            position: absolute;
-            z-index: 90;
-            top: 50%;
-            transform: translate(0%, -50%);
-        }
     }
 
     .brand-text {
@@ -126,4 +113,13 @@ header {
     height: 120px;
     background-color: white;
     transition: opacity;
+}
+
+.plus-tween {
+    font-size: 90px;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    position: absolute;
+    display: none;
 }

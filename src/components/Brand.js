@@ -93,7 +93,7 @@ const Brand = props => {
           onMouseEnter={() => setBackgroundColor('red')}
           onMouseLeave={() => setBackgroundColor('')}
         />
-        <BrandIdentities />
+        <div className="section-header">brand identities</div>
       </div>
     </div>
   )
