@@ -10,12 +10,13 @@
 }
 
 #label-slide-pin {
-    position: absolute;
+    position: relative;
     overflow: hidden;
 
     .title {
         font-family: Roboto-Bold;
         font-size: 330px;
+        text-align: center;
         color: black;
         background: white;
     }

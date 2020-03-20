@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { TweenMax, TimelineMax } from 'gsap'
 import * as ScrollMagic from 'scrollmagic'
 import PropTypes from 'prop-types'
-import { ReactComponent as BrandIdentities } from '../assets/images/brand-identities.svg'
 
 const Brand = props => {
   const { setBackgroundColor, controller } = props

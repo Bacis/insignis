@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { TweenMax, TimelineMax, Back } from 'gsap'
 import * as ScrollMagic from 'scrollmagic'
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
@@ -9,6 +9,7 @@ import Brand from './components/Brand'
 import Websites from './components/Websites'
 import AndMore from './components/AndMore'
 import LabelSlide from './components/LabelSlide'
+import Team from './components/Team'
 import './sass/main.scss'
 
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax, Back)
@@ -25,24 +26,23 @@ function App() {
         <SideMenu />
       </header>
       <section className="scroll-magic">
-        <div className="row">
-          <Hero
-            title="We are a group of independent designers and developers focused on
+        <Hero
+          title="We are a group of independent designers and developers focused on
               creating outstanding"
-          />
-          <Brand
-            setBackgroundColor={setBackgroundColor}
-            controller={controller}
-          />
-          <Websites
-            setBackgroundColor={setBackgroundColor}
-            controller={controller}
-          />
-          <AndMore controller={controller} />
-          <Hero title="We bring your company fearlessly forward to realize products that are ahead of their time." />
-          <Hero title="We are" />
-          <LabelSlide controller={controller} />
-        </div>
+        />
+        <Brand
+          setBackgroundColor={setBackgroundColor}
+          controller={controller}
+        />
+        <Websites
+          setBackgroundColor={setBackgroundColor}
+          controller={controller}
+        />
+        <AndMore controller={controller} />
+        <Hero title="We bring your company fearlessly forward to realize products that are ahead of their time." />
+        <Hero title="We are" />
+        <LabelSlide controller={controller} />
+        <Team title="Our team has been selected by the best" />
       </section>
     </div>
   )

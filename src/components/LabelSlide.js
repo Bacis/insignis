@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { TweenMax, TimelineMax } from 'gsap'
+import PropTypes from 'prop-types'
 import * as ScrollMagic from 'scrollmagic'
 
 const LabelSlide = props => {
@@ -16,9 +17,9 @@ const LabelSlide = props => {
 
     const textIncreaseTween = TweenMax.fromTo(
       '.label-slide-pin .title',
-      5,
+      8,
       { scale: 1 },
-      { scale: 7, delay: 5 }
+      { scale: 30, delay: 5 }
     )
 
     slideTimeline.add([slideTween, textIncreaseTween])
@@ -39,6 +40,13 @@ const LabelSlide = props => {
       </div>
     </div>
   )
+}
+
+LabelSlide.propTypes = {
+  controller: PropTypes.shape({
+    addScene: PropTypes.func.isRequired,
+    removeScene: PropTypes.func.isRequired,
+  }).isRequired,
 }
 
 export default LabelSlide
