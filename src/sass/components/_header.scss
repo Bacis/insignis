@@ -55,8 +55,10 @@ header {
 
         .contact-us {
             float: right;
+            margin-top: 20px;
 
-            svg {
+            .section-header {
+                font-size: 45px;
                 height: 60px;
             }
         }

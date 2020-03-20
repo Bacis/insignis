@@ -8,6 +8,7 @@ import Hero from './components/Hero'
 import Brand from './components/Brand'
 import Websites from './components/Websites'
 import AndMore from './components/AndMore'
+import LabelSlide from './components/LabelSlide'
 import './sass/main.scss'
 
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax, Back)
@@ -38,6 +39,9 @@ function App() {
             controller={controller}
           />
           <AndMore controller={controller} />
+          <Hero title="We bring your company fearlessly forward to realize products that are ahead of their time." />
+          <Hero title="We are" />
+          <LabelSlide controller={controller} />
         </div>
       </section>
     </div>

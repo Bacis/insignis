@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { ReactComponent as Logo } from '../assets/images/insignis-logo.svg'
-import { ReactComponent as ContactUs } from '../assets/images/contact-us.svg'
 
 const TopMenu = () => {
   const [logoHover, setLogoHover] = useState('')
@@ -16,7 +15,7 @@ const TopMenu = () => {
           <Logo />
         </li>
         <li className="contact-us">
-          <ContactUs />
+          <div className="section-header">Contact us</div>
         </li>
       </ol>
     </div>

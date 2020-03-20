@@ -6,7 +6,9 @@ const Hero = props => {
 
   return (
     <div id="hero" className="header-text">
-      <div className="main-header">{title}</div>
+      <div className="hero-section">
+        <div className="main-header">{title}</div>
+      </div>
     </div>
   )
 }

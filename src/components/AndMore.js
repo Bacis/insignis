@@ -2,8 +2,6 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { TweenMax, TimelineMax } from 'gsap'
 import * as ScrollMagic from 'scrollmagic'
-import { ReactComponent as Plus } from '../assets/images/plus.svg'
-import { ReactComponent as AndMoreTitle } from '../assets/images/more.svg'
 
 const AndMore = props => {
   const { controller } = props
@@ -24,7 +22,7 @@ const AndMore = props => {
       .addTo(controller)
   }, [])
 
-  const makeItRaining = () => {
+  const makeItRain = () => {
     const rainTween = TweenMax.fromTo(
       '.plus-tween-list div',
       {
@@ -67,7 +65,7 @@ const AndMore = props => {
         <div className="plus-tween">+</div>
       </div>
       <div id="and-more-pin">
-        <div className="and-more-section" onMouseEnter={() => makeItRaining()}>
+        <div className="and-more-section" onMouseEnter={() => makeItRain()}>
           <div className="plus">+</div>
           <div className="and-more">and more</div>
           <div className="plus">+</div>
