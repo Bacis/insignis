@@ -10,6 +10,7 @@ import Websites from './components/Websites'
 import AndMore from './components/AndMore'
 import LabelSlide from './components/LabelSlide'
 import Team from './components/Team'
+import Portfolio from './components/Portfolio'
 import './sass/main.scss'
 
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax, Back)
@@ -43,6 +44,7 @@ function App() {
         <Hero title="We are" />
         <LabelSlide controller={controller} />
         <Team title="Our team has been selected by the best" />
+        <Portfolio setBackgroundColor={setBackgroundColor} />
       </section>
     </div>
   )

@@ -1,0 +1,19 @@
+.portfolio {
+    .title {
+        font-family: Roboto-Bold;
+        font-size: 90px;
+        color: white;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 90px;
+        padding: 10rem;
+
+        .section-header {
+            padding: 0 20px;
+        }
+
+        div {
+            display: inline;
+        }
+    }
+}
