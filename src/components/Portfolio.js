@@ -12,7 +12,7 @@ const Portfolio = props => {
         </div>
         <div
           className="section-header"
-          onMouseEnter={() => setBackgroundColor('blue')}
+          onMouseEnter={() => setBackgroundColor('behance')}
           onMouseLeave={() => setBackgroundColor('')}
         >
           behance
@@ -20,7 +20,7 @@ const Portfolio = props => {
         <div>and</div>
         <div
           className="section-header"
-          onMouseEnter={() => setBackgroundColor('red')}
+          onMouseEnter={() => setBackgroundColor('dribble')}
           onMouseLeave={() => setBackgroundColor('')}
         >
           dribble

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { TweenMax, TimelineMax } from 'gsap'
 import PropTypes from 'prop-types'
 import * as ScrollMagic from 'scrollmagic'
-import { ReactComponent as WebsitesTitle } from '../assets/images/websites.svg'
 
 const Websites = props => {
   const { setBackgroundColor, controller } = props

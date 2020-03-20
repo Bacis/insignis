@@ -19,7 +19,7 @@ const LabelSlide = props => {
       '.label-slide-pin .title',
       8,
       { scale: 1 },
-      { scale: 30, delay: 5 }
+      { scale: 70, delay: 5 }
     )
 
     slideTimeline.add([slideTween, textIncreaseTween])
