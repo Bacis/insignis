@@ -19,19 +19,8 @@ header {
     
                 svg {
                     transform: translateX(-185px);
+                    transition: transform ease-out 1s;
     
-                    path {
-                        opacity: 1;
-                    }
-                }
-            }
-
-            .inactive {
-                svg {
-                    animation-name: moveInLeft;
-                    animation-duration: 0.5s;
-                    animation-timing-function: ease-out;
-
                     path {
                         opacity: 1;
                     }
@@ -40,10 +29,6 @@ header {
             
             .active {
                 svg {
-                    animation-name: moveOutLeft;
-                    animation-duration: 0.5s;
-                    animation-timing-function: ease-out;
-    
                     transform: translateX(0);
     
                     path {
@@ -95,9 +80,6 @@ header {
 
             li.active {
                 transform: translateX(10px)
-                // animation: slideOutLeft;
-                // animation-duration: 0.5s;
-                // animation-timing-function: ease-out;
             }
 
             li.active::first-letter {
