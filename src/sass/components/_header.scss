@@ -77,21 +77,31 @@ header {
         ol.right {
             list-style: none;
             font-size: 27px;
-            width: 45px;
+            width: 122px;
             margin-right: 25px;
             overflow-x: hidden;
 
             li {
-
                 cursor: pointer;
                 margin: 26px;
                 width: 30px;
+                transform: translateX(70px);
+                transition: transform ease-out 0.1s;
+            }
+
+            li::first-letter {
+                margin-right: 15px;
             }
 
             li.active {
-                animation: slideOutLeft;
-                animation-duration: 0.5s;
-                animation-timing-function: ease-out;
+                transform: translateX(10px)
+                // animation: slideOutLeft;
+                // animation-duration: 0.5s;
+                // animation-timing-function: ease-out;
+            }
+
+            li.active::first-letter {
+                margin-right: 0;
             }
         }
     }

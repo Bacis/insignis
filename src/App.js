@@ -9,6 +9,7 @@ import Brand from './components/Brand'
 import Websites from './components/Websites'
 import AndMore from './components/AndMore'
 import LabelSlide from './components/LabelSlide'
+import Label from './components/Label'
 import Team from './components/Team'
 import Portfolio from './components/Portfolio'
 import ContactUs from './components/ContactUs'
@@ -41,8 +42,8 @@ function App() {
           controller={controller}
         />
         <AndMore controller={controller} />
-        <Hero title="We bring your company fearlessly forward to realize products that are ahead of their time." />
-        <Hero title="We are" />
+        <Label title="We bring your company fearlessly forward to realize products that are ahead of their time." />
+        <Label title="We are" />
         <LabelSlide controller={controller} />
         <Team title="Our team has been selected by the best" />
         <Portfolio setBackgroundColor={setBackgroundColor} />

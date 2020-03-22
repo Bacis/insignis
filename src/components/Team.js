@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import teamMember from '../assets/images/teamMember.png'
 import Amazon from '../assets/images/amazon.svg'
 import Google from '../assets/images/google.svg'
 import Mtv from '../assets/images/mtv.svg'
