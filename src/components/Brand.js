@@ -12,10 +12,13 @@ const Brand = props => {
 
   useEffect(() => {
     const brandTimeline = new TimelineMax()
+    const centerY = window.innerHeight / 10
+    const centerX = window.innerWidth / 2
+
     const brandTween = TweenMax.fromTo(
       brandTweenRef.current,
       6,
-      { y: 0, x: 500, width: 200, height: 120, opacity: 0, delay: 4 },
+      { y: centerY, x: centerX, width: 200, height: 120, opacity: 0, delay: 4 },
       { y: -600, x: 100, width: 300, height: 190, opacity: 1, delay: 4 }
     )
 
@@ -23,15 +26,15 @@ const Brand = props => {
       brandTweenRef1.current,
       3,
       {
-        x: 500,
-        y: 0,
+        x: centerX,
+        y: centerY,
         width: 200,
         height: 120,
         opacity: 0,
       },
       {
-        x: 800,
-        y: -500,
+        x: centerX + 800,
+        y: centerY - 800,
         width: 300,
         height: 190,
         opacity: 1,
@@ -43,15 +46,15 @@ const Brand = props => {
       brandTweenRef2.current,
       7,
       {
-        x: 500,
-        y: 0,
+        x: centerX,
+        y: centerY,
         width: 200,
         height: 120,
         opacity: 0,
       },
       {
-        x: 800,
-        y: 100,
+        x: centerX + 1000,
+        y: centerY + 100,
         width: 300,
         height: 190,
         opacity: 1,

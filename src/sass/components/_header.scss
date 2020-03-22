@@ -98,6 +98,8 @@ header {
 }
 
 .scroll-magic {
+    overflow: hidden;
+
     .header-text {
         position: relative;
         height: 55rem;
@@ -122,6 +124,5 @@ header {
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
-    position: absolute;
     display: none;
 }

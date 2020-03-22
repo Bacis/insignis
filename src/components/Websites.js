@@ -12,10 +12,12 @@ const Websites = props => {
 
   useEffect(() => {
     const webTimeline = new TimelineMax()
+    const centerY = window.innerHeight / 10
+    const centerX = window.innerWidth / 2
     const webTween = TweenMax.fromTo(
       webTweenRef.current,
       6,
-      { y: 0, x: 500, width: 200, height: 120, opacity: 0, delay: 4 },
+      { y: centerY, x: centerX, width: 200, height: 120, opacity: 0, delay: 4 },
       { y: -600, x: 100, width: 300, height: 190, opacity: 1, delay: 4 }
     )
 
@@ -23,15 +25,15 @@ const Websites = props => {
       webTweenRef1.current,
       3,
       {
-        x: 500,
-        y: 0,
+        x: centerX,
+        y: centerY,
         width: 200,
         height: 120,
         opacity: 0,
       },
       {
-        x: 800,
-        y: -500,
+        x: centerX + 1000,
+        y: centerY - 500,
         width: 300,
         height: 190,
         opacity: 1,
@@ -43,15 +45,15 @@ const Websites = props => {
       webTweenRef2.current,
       7,
       {
-        x: 500,
-        y: 0,
+        x: centerX,
+        y: centerY,
         width: 200,
         height: 120,
         opacity: 0,
       },
       {
-        x: 800,
-        y: 100,
+        x: centerX + 1000,
+        y: centerY + 100,
         width: 300,
         height: 190,
         opacity: 1,

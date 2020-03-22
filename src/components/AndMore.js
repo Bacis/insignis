@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { TweenMax, TimelineMax } from 'gsap'
+import { TweenMax } from 'gsap'
 import * as ScrollMagic from 'scrollmagic'
 
 const AndMore = props => {
@@ -28,6 +28,8 @@ const AndMore = props => {
       {
         x: 'random(-900, 900)',
         y: 0,
+        display: 'none',
+        position: 'absolute',
       },
       {
         duration: 2,
@@ -42,13 +44,15 @@ const AndMore = props => {
     ).seek(100)
     const plusTween = TweenMax.fromTo(
       '.and-more-section .plus',
-      2,
+      3,
       { x: 0, y: 0 },
       { y: 600 }
     )
     setInterval(() => {
+      rainTween.seek(0)
       rainTween.pause(0)
-      plusTween.reverse()
+      plusTween.seek(0)
+      plusTween.pause(0)
     }, 2000)
   }
 
