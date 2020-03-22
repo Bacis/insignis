@@ -7,6 +7,11 @@
     background: black;
     z-index: 10;
     transform: skewX(-15deg);
+    transition: width ease-out 1s;
+
+    @include respond(tab-land) {
+        right: -80px;
+    }
 }
 
 #label-slide-pin {
@@ -19,5 +24,14 @@
         text-align: center;
         color: black;
         background: white;
+        transition: transform ease-in 0.5s;
+
+        @include respond(tab-land) {
+            font-size: 210px;
+        }
+    
+        @include respond(phone) {
+            font-size: 110px;
+        }
     }
 }

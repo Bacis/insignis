@@ -16,6 +16,20 @@
     top: 50%;
     padding: 0 5rem;
     transform: translate(0%, -50%);
+
+    @include respond(tab-land) {
+        font-size: 80px;
+        top: 60%;
+        transform: translate(0%, -50%);
+    }
+
+    @include respond(phone) {
+        font-size: 55px;
+        line-height: 50px;
+        padding: 0 1rem;
+        top: 60%;
+        transform: translate(0%, -50%);
+    }
 }
 
 .section-header {
@@ -23,6 +37,10 @@
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
+
+    @include respond(phone) {
+        font-size: 45px;
+    }
 }
 
 .and-more-section {
