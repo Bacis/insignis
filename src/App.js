@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { TweenMax, TimelineMax, Back } from 'gsap'
+import { TweenMax, TimelineMax, Back, gsap } from 'gsap'
 import * as ScrollMagic from 'scrollmagic'
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
 import TopMenu from './components/TopMenu'
@@ -15,6 +15,7 @@ import Portfolio from './components/Portfolio'
 import ContactUs from './components/ContactUs'
 import './sass/main.scss'
 
+gsap.registerPlugin(ScrollMagicPluginGsap)
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax, Back)
 TweenMax.defaultOverwrite = false
 
