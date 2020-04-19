@@ -3,12 +3,16 @@ import { TweenMax, TimelineMax } from 'gsap'
 import * as ScrollMagic from 'scrollmagic'
 import PropTypes from 'prop-types'
 
+import dayOne from '../assets/images/dayone.jpg'
+import pier13 from '../assets/images/pier-13.jpg'
+import dzineElements from '../assets/images/DzineElements.jpg'
+
 const Brand = props => {
   const { setBackgroundColor, controller } = props
 
-  const brandTweenRef = React.createRef()
-  const brandTweenRef1 = React.createRef()
-  const brandTweenRef2 = React.createRef()
+  const dayOneRef = React.createRef()
+  const pier13Ref = React.createRef()
+  const dzineElementsRef = React.createRef()
 
   useEffect(() => {
     const brandTimeline = new TimelineMax()
@@ -16,24 +20,24 @@ const Brand = props => {
     const centerX = window.innerWidth / 2
 
     const brandTween = TweenMax.fromTo(
-      brandTweenRef.current,
+      dayOneRef.current,
       6,
-      { y: centerY, x: centerX, width: 200, height: 120, opacity: 0, delay: 4 },
-      { y: -600, x: 100, width: 300, height: 190, opacity: 1, delay: 4 }
+      { y: centerY, x: 0, width: 200, height: 120, opacity: 0, delay: 4 },
+      { y: -600, x: -800, width: 300, height: 190, opacity: 1, delay: 4 }
     )
 
     const brandTween1 = TweenMax.fromTo(
-      brandTweenRef1.current,
+      pier13Ref.current,
       3,
       {
-        x: centerX,
+        x: 0,
         y: centerY,
         width: 200,
         height: 120,
         opacity: 0,
       },
       {
-        x: centerX + 800,
+        x: 800,
         y: centerY - 800,
         width: 300,
         height: 190,
@@ -43,17 +47,17 @@ const Brand = props => {
     )
 
     const brandTween2 = TweenMax.fromTo(
-      brandTweenRef2.current,
+      dzineElementsRef.current,
       7,
       {
-        x: centerX,
+        x: 0,
         y: centerY,
         width: 200,
         height: 120,
         opacity: 0,
       },
       {
-        x: centerX + 1000,
+        x: 1000,
         y: centerY + 100,
         width: 300,
         height: 190,
@@ -67,7 +71,7 @@ const Brand = props => {
     new ScrollMagic.Scene({
       triggerElement: '#brand',
       offset: 0,
-      duration: 900,
+      duration: 5000,
     })
       .setPin('#brand-pin')
       .setTween(brandTimeline)
@@ -77,20 +81,26 @@ const Brand = props => {
   return (
     <div id="brand" className="brand-text">
       <div id="brand-pin">
-        <div
-          ref={brandTweenRef}
+        <img
+          src={dayOne}
+          alt="Day one brand"
+          ref={dayOneRef}
           className="tween"
-          onMouseEnter={() => setBackgroundColor('blue')}
+          onMouseEnter={() => setBackgroundColor('day-one')}
           onMouseLeave={() => setBackgroundColor('')}
         />
-        <div
-          ref={brandTweenRef1}
+        <img
+          src={pier13}
+          alt="Pier13 brand"
+          ref={pier13Ref}
           className="tween"
           onMouseEnter={() => setBackgroundColor('orange')}
           onMouseLeave={() => setBackgroundColor('')}
         />
-        <div
-          ref={brandTweenRef2}
+        <img
+          src={dzineElements}
+          alt="Dzine elements brand"
+          ref={dzineElementsRef}
           className="tween"
           onMouseEnter={() => setBackgroundColor('red')}
           onMouseLeave={() => setBackgroundColor('')}
