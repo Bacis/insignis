@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import dayOne from '../assets/images/dayone.jpg'
 import pier13 from '../assets/images/pier-13.jpg'
 import dzineElements from '../assets/images/DzineElements.jpg'
+import jts from '../assets/images/JTS.png'
 
 const Brand = props => {
   const { setBackgroundColor, controller } = props
@@ -13,17 +14,17 @@ const Brand = props => {
   const dayOneRef = React.createRef()
   const pier13Ref = React.createRef()
   const dzineElementsRef = React.createRef()
+  const jtsRef = React.createRef()
 
   useEffect(() => {
     const brandTimeline = new TimelineMax()
     const centerY = window.innerHeight / 10
-    const centerX = window.innerWidth / 2
 
     const brandTween = TweenMax.fromTo(
       dayOneRef.current,
       6,
       { y: centerY, x: 0, width: 200, height: 120, opacity: 0, delay: 4 },
-      { y: -600, x: -800, width: 300, height: 190, opacity: 1, delay: 4 }
+      { y: -600, x: -800, width: 400, height: 250, opacity: 1, delay: 4 }
     )
 
     const brandTween1 = TweenMax.fromTo(
@@ -39,8 +40,8 @@ const Brand = props => {
       {
         x: 800,
         y: centerY - 800,
-        width: 300,
-        height: 190,
+        width: 400,
+        height: 250,
         opacity: 1,
         delay: 5,
       }
@@ -59,14 +60,34 @@ const Brand = props => {
       {
         x: 1000,
         y: centerY + 100,
-        width: 300,
-        height: 190,
+        width: 400,
+        height: 250,
         opacity: 1,
         delay: 5,
       }
     )
 
-    brandTimeline.add([brandTween, brandTween1, brandTween2])
+    const brandTween3 = TweenMax.fromTo(
+      jtsRef.current,
+      8,
+      {
+        x: 0,
+        y: centerY,
+        width: 200,
+        height: 120,
+        opacity: 0,
+      },
+      {
+        x: -1000,
+        y: centerY + 200,
+        width: 400,
+        height: 250,
+        opacity: 1,
+        delay: 4,
+      }
+    )
+
+    brandTimeline.add([brandTween, brandTween1, brandTween2, brandTween3])
 
     new ScrollMagic.Scene({
       triggerElement: '#brand',
@@ -101,6 +122,14 @@ const Brand = props => {
           src={dzineElements}
           alt="Dzine elements brand"
           ref={dzineElementsRef}
+          className="tween"
+          onMouseEnter={() => setBackgroundColor('red')}
+          onMouseLeave={() => setBackgroundColor('')}
+        />
+        <img
+          src={jts}
+          alt="JTS brand"
+          ref={jtsRef}
           className="tween"
           onMouseEnter={() => setBackgroundColor('red')}
           onMouseLeave={() => setBackgroundColor('')}
