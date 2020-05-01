@@ -2,6 +2,13 @@ import React, { useState } from 'react'
 import { TweenMax, TimelineMax, Back, gsap } from 'gsap'
 import * as ScrollMagic from 'scrollmagic'
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
+
+/* Motion graphics images */
+import motionImg from './assets/images/B-duck.jpg'
+import motionImg1 from './assets/images/Virgin-motion.jpg'
+import motionImg2 from './assets/images/oppo-c.jpg'
+import motionImg3 from './assets/images/Lakers.jpg'
+
 import TopMenu from './components/TopMenu'
 import SideMenu from './components/SideMenu'
 import Hero from './components/Hero'
@@ -13,6 +20,8 @@ import Label from './components/Label'
 import Team from './components/Team'
 import Portfolio from './components/Portfolio'
 import ContactUs from './components/ContactUs'
+import Showcase from './components/Showcase'
+
 import './sass/main.scss'
 
 gsap.registerPlugin(ScrollMagicPluginGsap)
@@ -22,6 +31,33 @@ TweenMax.defaultOverwrite = false
 const App = () => {
   const controller = new ScrollMagic.Controller()
   const [backgroundColor, setBackgroundColor] = useState('')
+
+  const motionShowcaseImages = [
+    {
+      src: motionImg,
+      alt: 'Image alt',
+      ref: React.createRef(),
+      hoverColor: 'blue',
+    },
+    {
+      src: motionImg1,
+      alt: 'Image alt',
+      ref: React.createRef(),
+      hoverColor: 'blue',
+    },
+    {
+      src: motionImg2,
+      alt: 'Image alt',
+      ref: React.createRef(),
+      hoverColor: 'red',
+    },
+    {
+      src: motionImg3,
+      alt: 'Image alt',
+      ref: React.createRef(),
+      hoverColor: 'red',
+    },
+  ]
 
   return (
     <div className={`App default ${backgroundColor}`}>
@@ -41,6 +77,12 @@ const App = () => {
         <Websites
           setBackgroundColor={setBackgroundColor}
           controller={controller}
+        />
+        <Showcase
+          setBackgroundColor={setBackgroundColor}
+          controller={controller}
+          images={motionShowcaseImages}
+          title="motion graphics"
         />
         <AndMore controller={controller} />
         <Label title="We bring your company fearlessly forward to realize products that are ahead of their time." />
