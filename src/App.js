@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollMagicPluginGsap)
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax, Back)
 TweenMax.defaultOverwrite = false
 
-function App() {
+const App = () => {
   const controller = new ScrollMagic.Controller()
   const [backgroundColor, setBackgroundColor] = useState('')
 
