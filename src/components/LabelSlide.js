@@ -26,7 +26,7 @@ const LabelSlide = props => {
 
     new ScrollMagic.Scene({
       triggerElement: '.label-slide-pin',
-      duration: 300,
+      duration: 700,
     })
       .setTween(slideTimeline)
       .addTo(controller)
