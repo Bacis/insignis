@@ -9,6 +9,10 @@ import motionImg1 from './assets/images/Virgin-motion.jpg'
 import motionImg2 from './assets/images/oppo-c.jpg'
 import motionImg3 from './assets/images/Lakers.jpg'
 
+/* Mobile apps */
+import mobileImg from './assets/images/mosquee-app.jpg'
+import mobileImg1 from './assets/images/sbm-c.jpg'
+
 import TopMenu from './components/TopMenu'
 import SideMenu from './components/SideMenu'
 import Hero from './components/Hero'
@@ -36,27 +40,42 @@ const App = () => {
     {
       src: motionImg,
       alt: 'Image alt',
-      ref: React.createRef(),
+      class: 'motion-img-1',
       hoverColor: 'blue',
     },
     {
       src: motionImg1,
       alt: 'Image alt',
-      ref: React.createRef(),
+      class: 'motion-img-2',
       hoverColor: 'blue',
     },
     {
       src: motionImg2,
       alt: 'Image alt',
-      ref: React.createRef(),
+      class: 'motion-img-3',
       hoverColor: 'red',
     },
     {
       src: motionImg3,
       alt: 'Image alt',
-      ref: React.createRef(),
+      class: 'motion-img-4',
       hoverColor: 'red',
     },
+  ]
+
+  const mobileShowcaseImages = [
+    {
+      src: mobileImg,
+      alt: 'Image alt',
+      class: 'mobile-img-1',
+      hoverColor: 'blue',
+    },
+    {
+      src: mobileImg1,
+      alt: 'Image alt',
+      class: 'mobile-img-2',
+      hoverColor: 'red',
+    }
   ]
 
   return (
@@ -83,6 +102,12 @@ const App = () => {
           controller={controller}
           images={motionShowcaseImages}
           title="motion graphics"
+        />
+        <Showcase
+          setBackgroundColor={setBackgroundColor}
+          controller={controller}
+          images={mobileShowcaseImages}
+          title="mobile apps"
         />
         <AndMore controller={controller} />
         <Label title="We bring your company fearlessly forward to realize products that are ahead of their time." />
