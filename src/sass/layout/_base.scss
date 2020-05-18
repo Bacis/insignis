@@ -55,17 +55,20 @@ body {
     background: crimson !important;
 }
 
-.behance {
-    background: #1442EC !important;
-}
+.behance { background: #1442EC !important; }
+.dribble { background: #E314EC !important; }
 
-.dribble {
-    background: #E314EC !important;
-}
+// brand identities
+.day-one { background: $dayOnePurple !important; }
+.pier13 { background: $pier13Blue !important; }
+.dzineElement { background: $dzineElementsBlue !important; }
+.jscSeries { background: $jscSeries !important; }
 
-.day-one {
-    background: $dayOnePurple !important;
-}
+// websites
+.tattooInk { background: $tattooInk !important; }
+.eclipseRave { background: $eclipseRave !important; }
+.getAMedical { background: $getAMedical !important; }
+.perfectWellness { background: $perfectWellness !important; }
 
 .blur {
     background: url(../../assets/images/gloss.png);

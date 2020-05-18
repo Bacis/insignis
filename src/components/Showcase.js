@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import * as ScrollMagic from 'scrollmagic'
 
 const Showcase = props => {
-  const { setBackgroundColor, controller, images, title, tweenCount } = props
+  const { setBackgroundColor, controller, images, title } = props
 
   useEffect(() => {
     const timeline = new TimelineMax()
@@ -18,8 +18,8 @@ const Showcase = props => {
       tween = TweenMax.fromTo(
         `.${images[0].class}`,
         6,
-        { y: centerY, x: 0, width: 200, height: 120, opacity: 0, delay: 4 },
-        { y: -600, x: -800, width: 400, height: 250, opacity: 1, delay: 4 }
+        { y: centerY, x: 0, width: '17%', opacity: 0, delay: 4 },
+        { y: -600, x: -800, width: '20%', opacity: 1, delay: 4 }
       )
 
       tween1 = TweenMax.fromTo(
@@ -28,15 +28,13 @@ const Showcase = props => {
         {
           x: 0,
           y: centerY,
-          width: 200,
-          height: 120,
+          width: '17%',
           opacity: 0,
         },
         {
           x: 800,
           y: centerY - 800,
-          width: 400,
-          height: 250,
+          width: '20%',
           opacity: 1,
           delay: 5,
         }
@@ -48,15 +46,13 @@ const Showcase = props => {
         {
           x: 0,
           y: centerY,
-          width: 200,
-          height: 120,
+          width: '17%',
           opacity: 0,
         },
         {
           x: 1000,
           y: centerY + 100,
-          width: 400,
-          height: 250,
+          width: '20%',
           opacity: 1,
           delay: 5,
         }
@@ -68,15 +64,13 @@ const Showcase = props => {
         {
           x: 0,
           y: centerY,
-          width: 200,
-          height: 120,
+          width: '17%',
           opacity: 0,
         },
         {
           x: -1000,
           y: centerY + 200,
-          width: 400,
-          height: 250,
+          width: '20%',
           opacity: 1,
           delay: 4,
         }
@@ -85,8 +79,8 @@ const Showcase = props => {
       tween = TweenMax.fromTo(
         `.${images[0].class}`,
         6,
-        { y: centerY, x: 0, width: 200, height: 120, opacity: 0, delay: 4 },
-        { y: -600, x: -800, width: 400, height: 250, opacity: 1, delay: 4 }
+        { y: centerY, x: 0, width: '17%', opacity: 0, delay: 4 },
+        { y: -600, x: -800, width: '20%', opacity: 1, delay: 4 }
       )
 
       tween1 = TweenMax.fromTo(
@@ -95,15 +89,13 @@ const Showcase = props => {
         {
           x: 0,
           y: centerY,
-          width: 200,
-          height: 120,
+          width: '17%',
           opacity: 0,
         },
         {
           x: -1000,
           y: centerY + 200,
-          width: 400,
-          height: 250,
+          width: '20%',
           opacity: 1,
           delay: 4,
         }
@@ -127,7 +119,7 @@ const Showcase = props => {
   return (
     <div id={`showcase-${title.replace(' ', '-')}`} className="brand-text">
       <div id={`showcase-${title.replace(' ', '-')}-pin`}>
-        {images.map((img, index) => (
+        {images.map((img) => (
           <img
             key={img.alt}
             src={img.src}

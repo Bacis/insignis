@@ -39,25 +39,25 @@ const App = () => {
   const motionShowcaseImages = [
     {
       src: motionImg,
-      alt: 'Image alt',
+      alt: 'Image alt motion 1',
       class: 'motion-img-1',
       hoverColor: 'blue',
     },
     {
       src: motionImg1,
-      alt: 'Image alt',
+      alt: 'Image alt motion 2',
       class: 'motion-img-2',
       hoverColor: 'blue',
     },
     {
       src: motionImg2,
-      alt: 'Image alt',
+      alt: 'Image alt motion 3',
       class: 'motion-img-3',
       hoverColor: 'red',
     },
     {
       src: motionImg3,
-      alt: 'Image alt',
+      alt: 'Image alt motion 4',
       class: 'motion-img-4',
       hoverColor: 'red',
     },
@@ -66,13 +66,13 @@ const App = () => {
   const mobileShowcaseImages = [
     {
       src: mobileImg,
-      alt: 'Image alt',
+      alt: 'Image alt mobile 1',
       class: 'mobile-img-1',
       hoverColor: 'blue',
     },
     {
       src: mobileImg1,
-      alt: 'Image alt',
+      alt: 'Image alt mobile 2',
       class: 'mobile-img-2',
       hoverColor: 'red',
     }
