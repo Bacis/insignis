@@ -6,12 +6,14 @@ import * as ScrollMagic from 'scrollmagic'
 const AndMore = props => {
   const { controller } = props
 
+  const isMobile = window.innerWidth < 500
+
   useEffect(() => {
     const andMoreTitle = TweenMax.fromTo(
       '.and-more-section',
       1,
-      { css: { opacity: 0, 'font-size': '36px' } },
-      { css: { opacity: 1, 'font-size': '75px' } }
+      { css: { opacity: 0, 'font-size': isMobile ? '20px' : '36px' } },
+      { css: { opacity: 1, 'font-size': isMobile ? '35px' : '75px' } }
     )
     new ScrollMagic.Scene({
       triggerElement: '#and-more',

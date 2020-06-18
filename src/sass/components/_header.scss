@@ -32,6 +32,12 @@ header {
                 svg {
                     transform: translateX(-185px);
                     transition: transform ease-out 1s;
+
+                    @include respond(phone) {
+                        height: 30px;
+                        width: 110px;
+                        transform: translateX(-84px);
+                    }
     
                     path {
                         opacity: 1;
@@ -54,6 +60,10 @@ header {
             float: right;
             margin-top: 20px;
 
+            @include respond(phone) {
+                margin-top: 10px;
+            }
+
             .section-header {
                 font-size: 45px;
                 height: 60px;
@@ -66,6 +76,10 @@ header {
 
         .logo:hover {
             width: 250px;
+
+            @include respond(phone) {
+                width: 110px;
+            }
         }
     }
 
@@ -79,8 +93,12 @@ header {
             list-style: none;
             font-size: 27px;
             width: 122px;
-            margin-right: 25px;
+            margin-right: 10px;
             overflow-x: hidden;
+
+            @include respond(desktop) {
+                margin-right: 25px;
+            }
 
             li {
                 cursor: pointer;
@@ -119,6 +137,15 @@ header {
 
     .brand-text {
         text-align: center;
+    }
+
+    .identities {
+        padding-top: 150px;
+    }
+
+    .identities-test {
+        padding-top: 0;
+        transition: padding-top 0.5s ease-out;
     }
 }
 

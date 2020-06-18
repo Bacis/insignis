@@ -9,13 +9,19 @@
     color: #fff;
     transition: background ease-out 0.5s;
 
+    @include respond(tab-land) {
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
     .section-header {
         font-size: 120px;
         line-height: 90px;
 
         @include respond(tab-land) {
-            font-size: 60px;
-            line-height: 60px;
+            font-size: 50px;
+            line-height: 50px;
         }
     }
 
@@ -55,7 +61,7 @@
 
 
                 @include respond(tab-land) {
-                    font-size: 14px;
+                    font-size: 12px;
                     line-height: 14px;
                 }
             }

@@ -37,9 +37,9 @@
                 }
             
                 @include respond(phone) {
-                    margin: 5px;
-                    height: 45px;
-                    width: 45px;
+                    margin: 4px;
+                    height: 40px;
+                    width: 40px;
                 }
             }
         }

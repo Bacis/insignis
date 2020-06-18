@@ -16,15 +16,19 @@ const Brand = props => {
   const dzineElementsRef = React.createRef()
   const jtsRef = React.createRef()
 
+  const isMobile = window.innerWidth < 500
+
   useEffect(() => {
     const brandTimeline = new TimelineMax()
     const centerY = window.innerHeight / 10
+    const tweenWidthFrom = isMobile ? '45%' : '17%'
+    const tweenWidthTo = isMobile ? '48% ' : '20%'
 
     const brandTween = TweenMax.fromTo(
       dayOneRef.current,
       6,
-      { y: centerY, x: 0, width: '17%', opacity: 0, delay: 4 },
-      { y: -600, x: -800, width: '20%', opacity: 1, delay: 4 }
+      { y: centerY, x: 0, width: tweenWidthFrom, opacity: 0, delay: 4 },
+      { y: -600, x: -800, width: tweenWidthTo, opacity: 1, delay: 4 }
     )
 
     const brandTween1 = TweenMax.fromTo(
@@ -33,13 +37,13 @@ const Brand = props => {
       {
         x: 0,
         y: centerY,
-        width: '17%',
+        width: tweenWidthFrom,
         opacity: 0,
       },
       {
         x: 800,
         y: centerY - 800,
-        width: '20%',
+        width: tweenWidthTo,
         opacity: 1,
         delay: 5,
       }
@@ -51,13 +55,13 @@ const Brand = props => {
       {
         x: 0,
         y: centerY,
-        width: '17%',
+        width: tweenWidthFrom,
         opacity: 0,
       },
       {
         x: 1000,
         y: centerY + 100,
-        width: '20%',
+        width: tweenWidthTo,
         opacity: 1,
         delay: 5,
       }
@@ -69,13 +73,13 @@ const Brand = props => {
       {
         x: 0,
         y: centerY,
-        width: '17%',
+        width: tweenWidthFrom,
         opacity: 0,
       },
       {
         x: -1000,
         y: centerY + 200,
-        width: '20%',
+        width: tweenWidthTo,
         opacity: 1,
         delay: 4,
       }
@@ -90,12 +94,13 @@ const Brand = props => {
     })
       .setPin('#brand-pin')
       .setTween(brandTimeline)
+      .setClassToggle('#brand-pin', 'identities-test')
       .addTo(controller)
   }, [])
 
   return (
     <div id="brand" className="brand-text">
-      <div id="brand-pin">
+      <div id="brand-pin" className="identities">
         <img
           src={dayOne}
           alt="Day one brand"

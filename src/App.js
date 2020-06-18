@@ -30,7 +30,7 @@ import './sass/main.scss'
 
 gsap.registerPlugin(ScrollMagicPluginGsap)
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax, Back)
-TweenMax.defaultOverwrite = false
+TweenMax.defaultOverwrite = true
 
 const App = () => {
   const controller = new ScrollMagic.Controller()
@@ -75,7 +75,7 @@ const App = () => {
       alt: 'Image alt mobile 2',
       class: 'mobile-img-2',
       hoverColor: 'red',
-    }
+    },
   ]
 
   return (

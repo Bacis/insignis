@@ -24,22 +24,22 @@
     }
 
     @include respond(phone) {
-        font-size: 55px;
+        font-size: 50px;
         line-height: 50px;
-        padding: 0 1rem;
-        top: 60%;
+        padding: 0 3rem;
+        top: 80%;
         transform: translate(0%, -50%);
     }
 }
 
 .section-header {
-    font-size: 75px;
+    font-size: 35px;
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
 
-    @include respond(phone) {
-        font-size: 45px;
+    @include respond(desktop) {
+        font-size: 75px;
     }
 }
 
