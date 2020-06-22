@@ -100,7 +100,7 @@ const Websites = props => {
 
   return (
     <div id="websites" className="brand-text">
-      <div id="web-pin">
+      <div id="web-pin" className="pin">
         <img
           src={eclipseImg}
           alt="Eclipse website"

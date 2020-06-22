@@ -10,36 +10,30 @@
     letter-spacing: 0;
     text-align: center;
     line-height: 90px;
-    position: absolute;
+    position: relative;
     z-index: 90;
-    width: 100%;
-    top: 50%;
-    padding: 0 5rem;
-    transform: translate(0%, -50%);
+    padding: 10rem 10rem 2rem 10rem;
 
     @include respond(tab-land) {
         font-size: 80px;
-        top: 60%;
-        transform: translate(0%, -50%);
+        padding: 5rem 3rem 1rem 3rem;
     }
 
     @include respond(phone) {
         font-size: 50px;
         line-height: 50px;
-        padding: 0 3rem;
-        top: 80%;
-        transform: translate(0%, -50%);
+        padding: 5rem 3rem 1rem 3rem;
     }
 }
 
 .section-header {
-    font-size: 35px;
+    font-size: 75px;
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
 
-    @include respond(desktop) {
-        font-size: 75px;
+    @include respond(phone) {
+        font-size: 35px;
     }
 }
 

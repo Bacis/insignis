@@ -118,7 +118,7 @@ const Showcase = props => {
 
   return (
     <div id={`showcase-${title.replace(' ', '-')}`} className="brand-text">
-      <div id={`showcase-${title.replace(' ', '-')}-pin`}>
+      <div id={`showcase-${title.replace(' ', '-')}-pin`} className="pin">
         {images.map((img) => (
           <img
             key={img.alt}

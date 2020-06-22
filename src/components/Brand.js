@@ -90,17 +90,16 @@ const Brand = props => {
     new ScrollMagic.Scene({
       triggerElement: '#brand',
       offset: 0,
-      duration: 5000,
+      duration: isMobile ? 1500 : 5000,
     })
       .setPin('#brand-pin')
       .setTween(brandTimeline)
-      .setClassToggle('#brand-pin', 'identities-test')
       .addTo(controller)
   }, [])
 
   return (
     <div id="brand" className="brand-text">
-      <div id="brand-pin" className="identities">
+      <div id="brand-pin" className="identities pin">
         <img
           src={dayOne}
           alt="Day one brand"

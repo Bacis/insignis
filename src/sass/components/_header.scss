@@ -93,11 +93,11 @@ header {
             list-style: none;
             font-size: 27px;
             width: 122px;
-            margin-right: 10px;
+            margin-right: 25px;
             overflow-x: hidden;
 
-            @include respond(desktop) {
-                margin-right: 25px;
+            @include respond(phone) {
+                margin-right: 10px;
             }
 
             li {
@@ -128,24 +128,10 @@ header {
 
     .header-text {
         position: relative;
-        height: 55rem;
-
-        @include respond(phone) {
-            height: 30rem;
-        }
     }
 
     .brand-text {
         text-align: center;
-    }
-
-    .identities {
-        padding-top: 150px;
-    }
-
-    .identities-test {
-        padding-top: 0;
-        transition: padding-top 0.5s ease-out;
     }
 }
 
@@ -156,12 +142,4 @@ header {
     height: auto;
     background-color: white;
     transition: opacity;
-}
-
-.plus-tween {
-    font-size: 90px;
-    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-    display: none;
 }
