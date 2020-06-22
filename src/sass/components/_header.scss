@@ -87,7 +87,7 @@ header {
         position: fixed;
         z-index: 100;
         right: 0;
-        top: 40%;
+        top: 20%;
 
         ol.right {
             list-style: none;
@@ -112,11 +112,12 @@ header {
                 margin-right: 15px;
             }
 
-            li.active {
-                transform: translateX(10px)
+            li:hover {
+                width: auto;
+                transform: translateX(0px)
             }
 
-            li.active::first-letter {
+            li:hover::first-letter {
                 margin-right: 0;
             }
         }

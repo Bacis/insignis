@@ -1,34 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const SideMenu = () => {
-  const [worksHover, setWorksHover] = useState('')
-  const [visionHover, setVisionHover] = useState('')
-  const [contactHover, setContactHover] = useState('')
-
   return (
     <div className="side-menu">
       <ol className="right">
-        <li
-          className={worksHover}
-          onMouseEnter={() => setWorksHover('active')}
-          onMouseLeave={() => setWorksHover('inactive')}
-        >
-          Works
-        </li>
-        <li
-          className={visionHover}
-          onMouseEnter={() => setVisionHover('active')}
-          onMouseLeave={() => setVisionHover('inactive')}
-        >
-          Vision
-        </li>
-        <li
-          className={contactHover}
-          onMouseEnter={() => setContactHover('active')}
-          onMouseLeave={() => setContactHover('inactive')}
-        >
-          Contact
-        </li>
+        <li>Brands</li>
+        <li>Websites</li>
+        <li>Motion</li>
+        <li>Works</li>
+        <li>Mobile</li>
+        <li>Vision</li>
+        <li>Contact</li>
       </ol>
     </div>
   )
