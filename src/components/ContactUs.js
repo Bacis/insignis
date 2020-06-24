@@ -12,28 +12,32 @@ const ContactUs = () => {
   })
 
   const hoverLeave = () => {
-    videoRef.pause()
-    setBackground('video-fadeout')
+    if (videoRef) {
+      videoRef.pause()
+      setBackground('video-fadeout')
+    }
   }
 
   const hoverOn = () => {
-    videoRef.play()
-    setBackground('video-fadein')
+    if (videoRef) {
+      videoRef.play()
+      setBackground('video-fadein')
+    }
   }
 
   return (
     <>
-      <video
-        src={blurVideo}
-        type="video/mp4"
-        id="blurVideo"
-        loop
-        preload="none"
-        className={`${background}`}
-        height={windowHeight}
-        width={window.innerWidth}
-      />
       <div className="footer">
+        <video
+          src={blurVideo}
+          type="video/mp4"
+          id="blurVideo"
+          loop
+          preload="none"
+          className={`${background}`}
+          height={windowHeight}
+          width={window.innerWidth}
+        />
         <div
           className="section-header"
           onMouseEnter={() => hoverOn()}
