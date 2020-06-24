@@ -6,7 +6,9 @@ const Label = props => {
 
   return (
     <div className="team">
-      <div className="title">{title}</div>
+      <div className="row">
+        <div className="title">{title}</div>
+      </div>
     </div>
   )
 }
