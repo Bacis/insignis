@@ -1,3 +1,22 @@
+#blurVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transition: opacity ease-out 0.5s;
+}
+
+.video-fadeout {
+    opacity: 0;
+    display: none;
+}
+
+.video-fadein {
+    display: block;
+    opacity: 0.9;
+}
+
 .footer {
     position: relative;
     display: flex;
@@ -18,6 +37,8 @@
     .section-header {
         font-size: 120px;
         line-height: 90px;
+        padding-top: 50px;
+        padding-bottom: 50px;
 
         @include respond(tab-land) {
             font-size: 50px;
