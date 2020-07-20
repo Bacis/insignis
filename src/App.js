@@ -93,22 +93,6 @@ const App = () => {
           setBackgroundColor={setBackgroundColor}
           controller={controller}
         />
-        <Websites
-          setBackgroundColor={setBackgroundColor}
-          controller={controller}
-        />
-        <Showcase
-          setBackgroundColor={setBackgroundColor}
-          controller={controller}
-          images={motionShowcaseImages}
-          title="motion graphics"
-        />
-        <Showcase
-          setBackgroundColor={setBackgroundColor}
-          controller={controller}
-          images={mobileShowcaseImages}
-          title="mobile apps"
-        />
         <AndMore controller={controller} />
         <Label title="We bring your company fearlessly forward to realize products that are ahead of their time." />
         <Label title="We are" />
