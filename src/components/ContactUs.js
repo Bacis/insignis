@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import blurVideo from '../assets/Neon-blue.mp4'
 
 const ContactUs = () => {
   const [background, setBackground] = useState('')
+  const [socialBackground, setSocialBackground] = useState('fadeout')
   const windowHeight = window.innerHeight
   let videoRef
 
@@ -14,14 +14,14 @@ const ContactUs = () => {
   const hoverLeave = () => {
     if (videoRef) {
       videoRef.pause()
-      setBackground('video-fadeout')
+      setBackground('fadeout')
     }
   }
 
   const hoverOn = () => {
     if (videoRef) {
       videoRef.play()
-      setBackground('video-fadein')
+      setBackground('fadein')
     }
   }
 
@@ -38,6 +38,7 @@ const ContactUs = () => {
           height={windowHeight}
           width={window.innerWidth}
         />
+        <div id="blurSocialMedia" className={`${socialBackground}`} />
         <div
           className="section-header"
           onMouseEnter={() => hoverOn()}
@@ -67,21 +68,59 @@ const ContactUs = () => {
             <p>IT +39 333 617 0799</p>
           </div>
         </div>
-        <div className="row">
-          <div className="grid-footer-social">
-            <div className="social">Behance</div>
-            <div className="social">Dribble</div>
-            <div className="social">Facebook</div>
-            <div className="social">Instagram</div>
+        <div className="hover-area">
+          <div className="row">
+            <div className="grid-footer-social">
+              <div className="social">
+                <a
+                  href="https://www.behance.net/insignisdesign"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  onMouseEnter={() => setSocialBackground('fadein behance')}
+                  onMouseLeave={() => setSocialBackground('fadeout')}
+                >
+                  Behance
+                </a>
+              </div>
+              <div className="social">
+                <a
+                  href="https://dribbble.com/yuriorbital"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  onMouseEnter={() => setSocialBackground('fadein dribble')}
+                  onMouseLeave={() => setSocialBackground('fadeout')}
+                >
+                  Dribble
+                </a>
+              </div>
+              <div className="social">
+                <a
+                  href="https://www.facebook.com/insigniscollective"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  onMouseEnter={() => setSocialBackground('fadein facebook')}
+                  onMouseLeave={() => setSocialBackground('fadeout')}
+                >
+                  Facebook
+                </a>
+              </div>
+              <div className="social">
+                <a
+                  href="https://www.linkedin.com/company/42417318/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  onMouseEnter={() => setSocialBackground('fadein facebook')}
+                  onMouseLeave={() => setSocialBackground('fadeout')}
+                >
+                  Linkedin
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </>
   )
-}
-
-ContactUs.propTypes = {
-  setBackgroundColor: PropTypes.func.isRequired,
 }
 
 export default ContactUs

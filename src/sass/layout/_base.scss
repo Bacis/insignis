@@ -57,6 +57,7 @@ body {
 
 .behance { background: #1442EC !important; }
 .dribble { background: #E314EC !important; }
+.facebook { background: #426BAB }
 
 // brand identities
 .day-one { background: $dayOnePurple !important; }
@@ -70,8 +71,7 @@ body {
 .getAMedical { background: $getAMedical !important; }
 .perfectWellness { background: $perfectWellness !important; }
 
-.blur {
-    background: url(../../assets/images/gloss.png);
-    height: 100%;
-    background-size: cover;
+// social
+.social-background {
+    background: orange;
 }

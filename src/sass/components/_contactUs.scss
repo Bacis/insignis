@@ -10,11 +10,21 @@
     z-index: 10;
 }
 
-.video-fadeout {
+#blurSocialMedia {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    height: 150px;
+    transition: all ease-out 0.5s;
+    filter: blur(35px);
+}
+
+.fadeout {
     opacity: 0;
 }
 
-.video-fadein {
+.fadein {
     opacity: 0.99;
 }
 
@@ -88,34 +98,47 @@
         }
     }
 
-    .row {
+    .hover-area {
         z-index: 11;
 
-        .grid-footer-social {
-            display: -ms-grid;
-            display: grid;
-            width: 100%;
-            margin-top: 50px;
-            margin-bottom: 40px;
-            padding-top: 40px;
-            grid-auto-columns: 1fr;
-            grid-column-gap: 50px;
-            grid-row-gap: 16px;
-            -ms-grid-columns: 1fr 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+        .row {
     
-            .social {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                font-size: 32px;
-                color: #FFFFFF;
-                letter-spacing: 0;
-                line-height: 48px;
+            .grid-footer-social {
+                display: -ms-grid;
+                display: grid;
+                width: 100%;
+                margin-top: 50px;
+                margin-bottom: 40px;
+                padding-top: 40px;
+                grid-auto-columns: 1fr;
+                grid-column-gap: 50px;
+                grid-row-gap: 16px;
+                -ms-grid-columns: 1fr 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+                .social {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-size: 32px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    line-height: 48px;
     
-                @include respond(tab-land) {
-                    font-size: 16px;
-                    line-height: 16px;
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        transition: font-size ease-in-out 0.3s;
+                    }
+
+                    a:hover {
+                        font-size: 35px;
+                    }
+        
+                    @include respond(tab-land) {
+                        font-size: 16px;
+                        line-height: 16px;
+                    }
                 }
             }
         }
