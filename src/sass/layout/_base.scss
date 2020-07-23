@@ -71,7 +71,21 @@ body {
 .getAMedical { background: $getAMedical !important; }
 .perfectWellness { background: $perfectWellness !important; }
 
-// social
-.social-background {
-    background: orange;
+#blurVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transition: all ease-out 0.5s;
+}
+
+.fadeout {
+    opacity: 0;
+}
+
+.fadein {
+    opacity: 0.99;
 }

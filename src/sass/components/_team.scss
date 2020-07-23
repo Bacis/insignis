@@ -27,9 +27,12 @@
 
         .image {
             img {
-                margin: 22px;
+                opacity: 0.3;
+                margin: 33px;
                 height: 153px;
                 width: 153px;
+                cursor: pointer;
+                transition: opacity ease-in 0.3s;
 
                 @include respond(tab-land) {
                     height: 100px;
@@ -41,6 +44,10 @@
                     height: 40px;
                     width: 40px;
                 }
+            }
+
+            img:hover {
+                opacity: 1;
             }
         }
     }

@@ -14,24 +14,28 @@
     }
 }
 
-#label-slide-pin {
+.label-area {
     position: relative;
-    overflow: hidden;
 
-    .title {
-        font-family: Roboto-Bold;
-        font-size: 330px;
-        text-align: center;
-        color: black;
-        background: white;
-        transition: transform ease-in 0.5s;
-
-        @include respond(tab-land) {
-            font-size: 210px;
-        }
+    #label-slide-pin {
+        position: relative;
+        overflow: hidden;
     
-        @include respond(phone) {
-            font-size: 110px;
+        .title {
+            font-family: Roboto-Bold;
+            font-size: 330px;
+            text-align: center;
+            color: black;
+            background: white;
+            transition: transform ease-in 0.2s;
+    
+            @include respond(tab-land) {
+                font-size: 210px;
+            }
+        
+            @include respond(phone) {
+                font-size: 110px;
+            }
         }
     }
 }

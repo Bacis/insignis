@@ -22,11 +22,17 @@
 
         .section-header {
             padding: 0 20px;
+            -webkit-text-fill-color: transparent;
+            transition: all ease-in-out 0.6s;
 
             @include respond(tab-land) {
                 display: block;
                 padding: 0;
             }
+        }
+
+        .section-header:hover {
+            -webkit-text-fill-color: white;
         }
 
         div {

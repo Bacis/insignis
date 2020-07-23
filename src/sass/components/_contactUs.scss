@@ -1,15 +1,3 @@
-#blurVideo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transition: opacity ease-out 0.5s;
-    z-index: 10;
-}
-
 #blurSocialMedia {
     position: absolute;
     bottom: 0;
@@ -18,14 +6,6 @@
     height: 150px;
     transition: all ease-out 0.5s;
     filter: blur(35px);
-}
-
-.fadeout {
-    opacity: 0;
-}
-
-.fadein {
-    opacity: 0.99;
 }
 
 .footer {
@@ -132,7 +112,7 @@
                     }
 
                     a:hover {
-                        font-size: 35px;
+                        font-size: 40px;
                     }
         
                     @include respond(tab-land) {

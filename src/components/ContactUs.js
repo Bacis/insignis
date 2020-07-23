@@ -1,43 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import blurVideo from '../assets/Neon-blue.mp4'
+import React, { useState } from 'react'
 
-const ContactUs = () => {
-  const [background, setBackground] = useState('')
+const ContactUs = props => {
+  const { hoverLeave, hoverOn } = props
   const [socialBackground, setSocialBackground] = useState('fadeout')
-  const windowHeight = window.innerHeight
-  let videoRef
-
-  useEffect(() => {
-    videoRef = document.getElementById('blurVideo')
-  })
-
-  const hoverLeave = () => {
-    if (videoRef) {
-      videoRef.pause()
-      setBackground('fadeout')
-    }
-  }
-
-  const hoverOn = () => {
-    if (videoRef) {
-      videoRef.play()
-      setBackground('fadein')
-    }
-  }
 
   return (
     <>
       <div className="footer">
-        <video
-          src={blurVideo}
-          type="video/mp4"
-          id="blurVideo"
-          loop
-          preload="none"
-          className={`${background}`}
-          height={windowHeight}
-          width={window.innerWidth}
-        />
         <div id="blurSocialMedia" className={`${socialBackground}`} />
         <div
           className="section-header"

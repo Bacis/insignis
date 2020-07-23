@@ -10,7 +10,7 @@ const LabelSlide = props => {
     const slideTimeline = new TimelineMax()
     const slideTween = TweenMax.fromTo(
       '.labelSlideOverlay',
-      5,
+      4,
       { width: '120%' },
       { width: '0%' }
     )
@@ -19,24 +19,26 @@ const LabelSlide = props => {
       '.label-slide-pin .title',
       8,
       { scale: 1 },
-      { scale: 70, delay: 5 }
+      { scale: 20, delay: 8 }
     )
 
     slideTimeline.add([slideTween, textIncreaseTween])
 
     new ScrollMagic.Scene({
-      triggerElement: '.label-slide-pin',
-      duration: 700,
+      triggerElement: '#label-slide-pin',
+      duration: 1000,
     })
       .setTween(slideTimeline)
       .addTo(controller)
   })
 
   return (
-    <div id="label-slide-pin">
-      <div className="labelSlideOverlay" />
-      <div className="label-slide-pin">
-        <div className="title">insignis</div>
+    <div className="label-area">
+      <div id="label-slide-pin">
+        <div className="labelSlideOverlay" />
+        <div className="label-slide-pin">
+          <div className="title">insignis</div>
+        </div>
       </div>
     </div>
   )

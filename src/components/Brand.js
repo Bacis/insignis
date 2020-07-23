@@ -9,7 +9,7 @@ import dzineElements from '../assets/images/DzineElements.jpg'
 import jts from '../assets/images/JTS.png'
 
 const Brand = props => {
-  const { setBackgroundColor, controller } = props
+  const { setBackgroundColor, controller, hoverLeave, hoverOn } = props
 
   const dayOneRef = React.createRef()
   const pier13Ref = React.createRef()
@@ -132,7 +132,13 @@ const Brand = props => {
           onMouseEnter={() => setBackgroundColor('jscSeries')}
           onMouseLeave={() => setBackgroundColor('')}
         />
-        <div className="section-header">brand identities</div>
+        <div
+          className="section-header"
+          onMouseEnter={() => hoverOn()}
+          onMouseLeave={() => hoverLeave()}
+        >
+          brand identities
+        </div>
       </div>
     </div>
   )
@@ -144,6 +150,8 @@ Brand.propTypes = {
     addScene: PropTypes.func.isRequired,
     removeScene: PropTypes.func.isRequired,
   }).isRequired,
+  hoverLeave: PropTypes.func.isRequired,
+  hoverOn: PropTypes.func.isRequired,
 }
 
 export default Brand

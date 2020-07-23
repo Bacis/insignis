@@ -26,12 +26,13 @@ header {
             }
     
             .logo {
+                cursor: pointer;
                 float: left;
                 overflow-x: hidden;
     
                 svg {
                     transform: translateX(-185px);
-                    transition: transform ease-out 1s;
+                    transition: transform ease-out 0.3s;
 
                     @include respond(phone) {
                         height: 30px;
@@ -57,6 +58,7 @@ header {
         }
 
         .contact-us {
+            cursor: pointer;
             float: right;
             margin-top: 20px;
 
