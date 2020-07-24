@@ -37,6 +37,18 @@
     }
 }
 
+.brand, .websites, .mobile, .motion {
+    cursor: pointer;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.brand:hover, .websites:hover, .mobile:hover, .motion:hover {
+    -webkit-text-fill-color: white;
+}
+
 .and-more-section {
     display: inline-block;
 

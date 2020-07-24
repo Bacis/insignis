@@ -27,7 +27,7 @@ import Label from './components/Label'
 import Team from './components/Team'
 import Portfolio from './components/Portfolio'
 import ContactUs from './components/ContactUs'
-import Showcase from './components/Showcase'
+import ShowCaseAll from './components/ShowCaseAll'
 
 import './sass/main.scss'
 
@@ -124,7 +124,7 @@ const App = () => {
             title="We are a group of independent designers and developers focused on
                 creating outstanding"
           />
-          <Brand
+          <ShowCaseAll
             setBackgroundColor={setBackgroundColor}
             controller={controller}
             hoverLeave={hoverLeave}

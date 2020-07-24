@@ -17,7 +17,7 @@ const AndMore = props => {
     )
     new ScrollMagic.Scene({
       triggerElement: '#and-more',
-      duration: 900,
+      duration: 1100,
     })
       .setPin('#and-more-pin')
       .setTween(andMoreTitle)
