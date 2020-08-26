@@ -7,7 +7,9 @@ const ShowcaseProject = props => {
   return (
     <div className={`brand-portfolio ${portfolioClass}`}>
       {projects.map(project => (
-        <div className="content-area">
+        <div
+          className={`content-area ${project.floatLeft ? 'start' : 'flexEnd'}`}
+        >
           {project.floatLeft ? (
             <>
               <img
