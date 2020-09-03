@@ -1,13 +1,18 @@
 #and-more {
-    .plus-tween {
-        font-size: 90px;
-        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        display: none;
+  margin-top: 10rem;
+  .plus-tween {
+    font-size: 90px;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    display: none;
 
-        @include respond(phone) {
-            font-size: 35px;
-        }
+    @include respond(phone) {
+      font-size: 35px;
     }
+  }
+
+  .and-more-section {
+    font-size: 75px;
+  }
 }

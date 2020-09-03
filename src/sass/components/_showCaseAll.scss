@@ -1,65 +1,80 @@
 .brand-portfolio {
-    opacity: 0;
-    overflow: hidden;
-    height: 0;
-    transition: opacity ease-in-out 1s;
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+  transition: opacity ease-in-out 1s;
 
-    .content-area {
-        display: flex;
-        justify-content: start;
-        margin: 2rem 4rem;
+  .content-area {
+    display: flex;
+    justify-content: start;
+    margin: 2rem 4rem;
 
-        .text {
-            margin-left: 2rem;
-            margin-right: 2rem;
-            margin-top: auto;
-            margin-bottom: auto;
-            
-            h1 {
-                cursor: pointer;
-                font-size: 50px;
-                -webkit-text-fill-color: transparent;
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: white;
-                transition: all ease-out 0.3s;
-            }
+    .text {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      margin-top: auto;
+      margin-bottom: auto;
 
-            h1:hover {
-                -webkit-text-fill-color: white;
-            }
+      h1 {
+        cursor: pointer;
+        font-size: 50px;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+        transition: all ease-out 0.3s;
+      }
 
-            .info {
-                font-size: 21px;
-            }
-        }
+      h1:hover {
+        -webkit-text-fill-color: white;
+      }
 
-        .alignRight {
-            h1 {
-                text-align: right;
-            }
-        }
-
-        img {
-            cursor: pointer;
-            margin: 0 2rem;
-            width: 0%;
-        }
+      .info {
+        font-size: 21px;
+      }
     }
 
-    .flexEnd {
-        justify-content: flex-end;
+    .alignRight {
+      h1 {
+        text-align: right;
+      }
     }
+
+    img {
+      cursor: pointer;
+      margin: 0 2rem;
+      width: 0%;
+    }
+  }
+
+  .flexEnd {
+    justify-content: flex-end;
+  }
 }
 
-.brand-open {
+.brand-ids {
+  .brand-open {
     opacity: 1;
     height: auto;
     position: relative;
     overflow: visible;
-    
+
     .content-area {
-        img {
-            width: 30%;
-        }
+      img {
+        width: 30%;
+      }
     }
+  }
+}
+
+.open-showcase {
+  opacity: 1;
+  height: auto;
+  position: relative;
+  overflow: visible;
+
+  .content-area {
+    img {
+      width: 30%;
+    }
+  }
 }

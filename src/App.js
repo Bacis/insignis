@@ -1,106 +1,52 @@
-import React, { useState, useEffect } from 'react'
-import { TweenMax, TimelineMax, Back, gsap } from 'gsap'
-import * as ScrollMagic from 'scrollmagic'
-import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
-
-/* Motion graphics images */
-import motionImg from './assets/images/B-duck.jpg'
-import motionImg1 from './assets/images/Virgin-motion.jpg'
-import motionImg2 from './assets/images/oppo-c.jpg'
-import motionImg3 from './assets/images/Lakers.jpg'
-
-/* Mobile apps */
-import mobileImg from './assets/images/mosquee-app.jpg'
-import mobileImg1 from './assets/images/sbm-c.jpg'
+import React, { useState, useEffect } from "react";
+import { TweenMax, TimelineMax, Back, gsap } from "gsap";
+import * as ScrollMagic from "scrollmagic";
+import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 
 /* Blur video */
-import blurVideo from './assets/Neon-blue.mp4'
+import blurVideo from "./assets/Neon-blue.mp4";
 
-import TopMenu from './components/TopMenu'
-import SideMenu from './components/SideMenu'
-import Hero from './components/Hero'
-import Brand from './components/Brand'
-import Websites from './components/Websites'
-import AndMore from './components/AndMore'
-import LabelSlide from './components/LabelSlide'
-import Label from './components/Label'
-import Team from './components/Team'
-import Portfolio from './components/Portfolio'
-import ContactUs from './components/ContactUs'
-import ShowCaseAll from './components/ShowCaseAll'
+import TopMenu from "./components/TopMenu";
+import SideMenu from "./components/SideMenu";
+import Hero from "./components/Hero";
+import AndMore from "./components/AndMore";
+import LabelSlide from "./components/LabelSlide";
+import Label from "./components/Label";
+import Team from "./components/Team";
+import Portfolio from "./components/Portfolio";
+import ContactUs from "./components/ContactUs";
+import ShowCaseAll from "./components/ShowCaseAll";
 
-import './sass/main.scss'
+import "./sass/main.scss";
 
-gsap.registerPlugin(ScrollMagicPluginGsap)
-ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax, Back)
-TweenMax.defaultOverwrite = true
+gsap.registerPlugin(ScrollMagicPluginGsap);
+ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax, Back);
+TweenMax.defaultOverwrite = true;
 
 const App = () => {
-  const controller = new ScrollMagic.Controller()
-  const [backgroundColor, setBackgroundColor] = useState('')
-  const [backgroundVideo, setBackgroundVideo] = useState('')
-  const windowHeight = window.innerHeight
-  let videoRef
+  const controller = new ScrollMagic.Controller();
+  const [backgroundColor, setBackgroundColor] = useState("");
+  const [backgroundVideo, setBackgroundVideo] = useState("");
+  const [videoRef, setVideoRef] = useState(null);
+  const windowHeight = window.innerHeight;
 
   useEffect(() => {
-    videoRef = document.getElementById('blurVideo')
-  })
-
-  const motionShowcaseImages = [
-    {
-      src: motionImg,
-      alt: 'Image alt motion 1',
-      class: 'motion-img-1',
-      hoverColor: 'blue',
-    },
-    {
-      src: motionImg1,
-      alt: 'Image alt motion 2',
-      class: 'motion-img-2',
-      hoverColor: 'blue',
-    },
-    {
-      src: motionImg2,
-      alt: 'Image alt motion 3',
-      class: 'motion-img-3',
-      hoverColor: 'red',
-    },
-    {
-      src: motionImg3,
-      alt: 'Image alt motion 4',
-      class: 'motion-img-4',
-      hoverColor: 'red',
-    },
-  ]
-
-  const mobileShowcaseImages = [
-    {
-      src: mobileImg,
-      alt: 'Image alt mobile 1',
-      class: 'mobile-img-1',
-      hoverColor: 'blue',
-    },
-    {
-      src: mobileImg1,
-      alt: 'Image alt mobile 2',
-      class: 'mobile-img-2',
-      hoverColor: 'red',
-    },
-  ]
+    setVideoRef(document.getElementById("blurVideo"));
+  }, []);
 
   const hoverLeave = () => {
     if (videoRef) {
-      videoRef.pause()
-      setBackgroundVideo('fadeout')
+      videoRef.pause();
+      setBackgroundVideo("fadeout");
     }
-  }
+  };
 
   const hoverOn = () => {
     if (videoRef) {
-      videoRef.play()
-      setBackgroundVideo('fadein')
+      videoRef.play();
+      setBackgroundVideo("fadein");
     }
-  }
+  };
 
   return (
     <>
@@ -144,7 +90,7 @@ const App = () => {
         </section>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
