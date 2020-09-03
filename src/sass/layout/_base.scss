@@ -1,91 +1,112 @@
 :root {
-    --white: #ffffff;
-    --black: #000000;
-    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
-    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+  --white: #ffffff;
+  --black: #000000;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 }
 
-$bp-largest: 75em;     // 1200px
-$bp-large: 68.75em;    // 1100px
-$bp-medium: 56.25em;   // 900px
-$bp-small: 37.5em;     // 600px
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
 $bp-smallest: 31.25em; // 500px
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 82.5%; // 1rem = 10px, 10px/16px = 62.5%
+  box-sizing: border-box;
+  font-size: 82.5%; // 1rem = 10px, 10px/16px = 62.5%
 
-    @media only screen and (max-width: $bp-large) {
-        
-    }
+  @media only screen and (max-width: $bp-large) {
+  }
 }
 
 body {
-    font-family: 'Roboto-Bold';
-    line-height: 1.6;
-    min-height: 100vh;
-    color: white;
+  font-family: "Roboto-Bold";
+  line-height: 1.6;
+  min-height: 100vh;
+  color: white;
 }
 
 .default {
-    background: black;
-    transition: background ease-out 0.5s;
+  background: black;
+  transition: background ease-out 0.5s;
 }
 
 .blue {
-    background: cornflowerblue !important;
+  background: cornflowerblue !important;
 }
 
 .orange {
-    background: darkorange !important;
+  background: darkorange !important;
 }
 
 .red {
-    background: crimson !important;
+  background: crimson !important;
 }
 
-.behance { background: #1442EC !important; }
-.dribble { background: #E314EC !important; }
-.facebook { background: #426BAB }
+.behance {
+  background: #1442ec !important;
+}
+.dribble {
+  background: #e314ec !important;
+}
+.facebook {
+  background: #426bab;
+}
 
 // brand identities
-.day-one { background: $dayOnePurple !important; }
-.pier13 { background: $pier13Blue !important; }
-.dzineElement { background: $dzineElementsBlue !important; }
-.jscSeries { background: $jscSeries !important; }
+.day-one {
+  background: $dayOneHover !important;
+}
+.pier13 {
+  background: $pier13Hover !important;
+}
+.dzineElement {
+  background: $dzineElementsHover !important;
+}
+.jscSeries {
+  background: $jscSeriesHover !important;
+}
 
 // websites
-.tattooInk { background: $tattooInk !important; }
-.eclipseRave { background: $eclipseRave !important; }
-.getAMedical { background: $getAMedical !important; }
-.perfectWellness { background: $perfectWellness !important; }
+.tattooInk {
+  background: $tattooInk !important;
+}
+.eclipseRave {
+  background: $eclipseRave !important;
+}
+.getAMedical {
+  background: $getAMedical !important;
+}
+.perfectWellness {
+  background: $perfectWellness !important;
+}
 
 #blurVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transition: all ease-out 0.5s;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transition: all ease-out 0.5s;
 }
 
 .fadeout {
-    opacity: 0;
+  opacity: 0;
 }
 
 .fadein {
-    opacity: 0.99;
+  opacity: 0.99;
 }

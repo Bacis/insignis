@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-const ShowcaseProject = props => {
-  const { setBackgroundColor, portfolioClass, projects } = props
+const ShowcaseProject = (props) => {
+  const { setBackgroundColor, portfolioClass, projects } = props;
 
   return (
     <div className={`brand-portfolio ${portfolioClass}`}>
-      {projects.map(project => (
+      {projects.map((project) => (
         <div
-          className={`content-area ${project.floatLeft ? 'start' : 'flexEnd'}`}
+          className={`content-area ${project.floatLeft ? "start" : "flexEnd"}`}
         >
           {project.floatLeft ? (
             <>
@@ -17,32 +17,38 @@ const ShowcaseProject = props => {
                 src={project.src}
                 alt={project.alt}
                 onMouseEnter={() => setBackgroundColor(project.hoverKey)}
-                onMouseLeave={() => setBackgroundColor('')}
+                onMouseLeave={() => setBackgroundColor("")}
               />
               <div className="text">
                 <h1>{project.title}</h1>
-                <div className="info">{project.info}</div>
+                <div className="info">
+                  <div className="see-more"></div>
+                  <div className="label">{project.info}</div>
+                </div>
               </div>
             </>
           ) : (
             <>
               <div className="text alignRight">
                 <h1>{project.title}</h1>
-                <div className="info">{project.info}</div>
+                <div className="info">
+                  <div className="see-more"></div>
+                  <div className="label">{project.info}</div>
+                </div>
               </div>
               <img
                 src={project.src}
                 alt={project.alt}
                 onMouseEnter={() => setBackgroundColor(project.hoverKey)}
-                onMouseLeave={() => setBackgroundColor('')}
+                onMouseLeave={() => setBackgroundColor("")}
               />
             </>
           )}
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
 ShowcaseProject.propTypes = {
   setBackgroundColor: PropTypes.func.isRequired,
@@ -51,6 +57,6 @@ ShowcaseProject.propTypes = {
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
   }).isRequired,
-}
+};
 
-export default ShowcaseProject
+export default ShowcaseProject;
