@@ -1,126 +1,125 @@
 #blurSocialMedia {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    min-width: 100%;
-    height: 150px;
-    transition: all ease-out 0.5s;
-    filter: blur(35px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  height: 150px;
+  transition: all ease-out 0.5s;
+  filter: blur(35px);
 }
 
 .footer {
-    position: relative;
-    display: flex;
+  position: relative;
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  transition: background ease-out 0.5s;
+
+  @include respond(tab-land) {
+    padding-top: 30px;
+  }
+
+  .section-header {
+    cursor: pointer;
+    font-size: 120px;
+    line-height: 90px;
     padding-top: 50px;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-    transition: background ease-out 0.5s;
+    padding-bottom: 50px;
+    z-index: 11;
 
     @include respond(tab-land) {
-        padding-top: 30px;
+      font-size: 50px;
+      line-height: 50px;
     }
+  }
 
-    .section-header {
-        font-size: 120px;
-        line-height: 90px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        z-index: 11;
+  .grid-footer {
+    z-index: 11;
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .column {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+      .city {
+        font-size: 40px;
+        letter-spacing: 0;
+        line-height: 48px;
 
         @include respond(tab-land) {
-            font-size: 50px;
-            line-height: 50px;
+          font-size: 20px;
+          line-height: 20px;
         }
-    }
+      }
 
-    .grid-footer {
-        z-index: 11;
+      p {
+        font-size: 28px;
+        letter-spacing: 0;
+        line-height: 40px;
+
+        @include respond(tab-land) {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+
+  .hover-area {
+    z-index: 11;
+
+    .row {
+      .grid-footer-social {
         display: -ms-grid;
         display: grid;
         width: 100%;
-        margin-top: 100px;
+        margin-top: 50px;
         margin-bottom: 40px;
         padding-top: 40px;
         grid-auto-columns: 1fr;
-        grid-column-gap: 16px;
+        grid-column-gap: 50px;
         grid-row-gap: 16px;
-        -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+        -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 
-        .column {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        .social {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 32px;
+          color: #ffffff;
+          letter-spacing: 0;
+          line-height: 48px;
 
-            .city {
-                font-size: 40px;
-                letter-spacing: 0;
-                line-height: 48px;
+          a {
+            text-decoration: none;
+            color: #fff;
+            transition: font-size ease-in-out 0.3s;
+          }
 
-                @include respond(tab-land) {
-                    font-size: 20px;
-                    line-height: 20px;
-                }
-            }
+          a:hover {
+            font-size: 40px;
+          }
 
-            p {
-                font-size: 28px;
-                letter-spacing: 0;
-                line-height: 40px;
-
-
-                @include respond(tab-land) {
-                    font-size: 12px;
-                    line-height: 14px;
-                }
-            }
+          @include respond(tab-land) {
+            font-size: 16px;
+            line-height: 16px;
+          }
         }
+      }
     }
-
-    .hover-area {
-        z-index: 11;
-
-        .row {
-    
-            .grid-footer-social {
-                display: -ms-grid;
-                display: grid;
-                width: 100%;
-                margin-top: 50px;
-                margin-bottom: 40px;
-                padding-top: 40px;
-                grid-auto-columns: 1fr;
-                grid-column-gap: 50px;
-                grid-row-gap: 16px;
-                -ms-grid-columns: 1fr 1fr 1fr 1fr;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-        
-                .social {
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                    font-size: 32px;
-                    color: #FFFFFF;
-                    letter-spacing: 0;
-                    line-height: 48px;
-    
-                    a {
-                        text-decoration: none;
-                        color: #fff;
-                        transition: font-size ease-in-out 0.3s;
-                    }
-
-                    a:hover {
-                        font-size: 40px;
-                    }
-        
-                    @include respond(tab-land) {
-                        font-size: 16px;
-                        line-height: 16px;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
