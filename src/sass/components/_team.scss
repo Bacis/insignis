@@ -1,54 +1,53 @@
 .team {
+  .title {
+    font-family: Roboto-Bold;
+    font-size: 90px;
+    color: white;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 90px;
+    padding: 10rem 10rem 5rem 10rem;
 
-    .title {
-        font-family: Roboto-Bold;
-        font-size: 90px;
-        color: white;
-        letter-spacing: 0;
-        text-align: center;
-        line-height: 90px;
-        padding: 10rem 10rem 5rem 10rem;
+    @include respond(tab-land) {
+      font-size: 80px;
+      line-height: 80px;
+      padding: 5rem 5rem 2.5rem 5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 50px;
+      line-height: 50px;
+      padding: 2rem 2rem 1.5rem 2rem;
+    }
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      img {
+        cursor: pointer;
+        opacity: 0.3;
+        margin: 33px;
+        transition: opacity ease-in 0.3s;
 
         @include respond(tab-land) {
-            font-size: 80px;
-            line-height: 80px;
-            padding: 5rem 5rem 2.5rem 5rem;
+          height: 100px;
+          width: 100px;
         }
 
         @include respond(phone) {
-            font-size: 50px;
-            line-height: 50px;
-            padding: 2rem 2rem 1.5rem 2rem;
+          margin: 4px;
+          height: 40px;
+          width: 40px;
         }
+      }
+
+      img:hover {
+        opacity: 1;
+      }
     }
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-
-        .image {
-            img {
-                opacity: 0.3;
-                margin: 33px;
-                height: 153px;
-                width: 153px;
-                cursor: pointer;
-                transition: opacity ease-in 0.3s;
-
-                @include respond(tab-land) {
-                    height: 100px;
-                    width: 100px;
-                }
-            
-                @include respond(phone) {
-                    margin: 4px;
-                    height: 40px;
-                    width: 40px;
-                }
-            }
-
-            img:hover {
-                opacity: 1;
-            }
-        }
-    }
+  }
 }
