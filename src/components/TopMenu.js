@@ -1,25 +1,32 @@
-import React, { useState } from 'react'
-import { ReactComponent as Logo } from '../assets/images/insignis-logo.svg'
+import React, { useState } from "react";
+import { ReactComponent as Logo } from "../assets/images/insignis-logo.svg";
 
-const TopMenu = () => {
-  const [logoHover, setLogoHover] = useState('')
+const TopMenu = (props) => {
+  const { contactUs } = props;
+  const [logoHover, setLogoHover] = useState("");
+
+  const scrollToBottom = () => {
+    contactUs.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="top-menu">
       <ol>
         <li
           className={`logo ${logoHover}`}
-          onMouseEnter={() => setLogoHover('active')}
-          onMouseLeave={() => setLogoHover('inactive')}
+          onMouseEnter={() => setLogoHover("active")}
+          onMouseLeave={() => setLogoHover("inactive")}
         >
           <Logo />
         </li>
         <li className="contact-us">
-          <div className="section-header">Contact us</div>
+          <div onClick={() => scrollToBottom()} className="section-header">
+            Contact us
+          </div>
         </li>
       </ol>
     </div>
-  )
-}
+  );
+};
 
-export default TopMenu
+export default TopMenu;

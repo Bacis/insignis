@@ -29,6 +29,7 @@ const App = () => {
   const [backgroundVideo, setBackgroundVideo] = useState("");
   const [videoRef, setVideoRef] = useState(null);
   const windowHeight = window.innerHeight;
+  let contactUs = React.createRef();
 
   useEffect(() => {
     setVideoRef(document.getElementById("blurVideo"));
@@ -62,7 +63,7 @@ const App = () => {
       />
       <div className={`App default ${backgroundColor}`}>
         <header className="App-header">
-          <TopMenu />
+          <TopMenu contactUs={contactUs} />
           <SideMenu />
         </header>
         <section className="scroll-magic">
@@ -86,6 +87,7 @@ const App = () => {
             setBackgroundColor={setBackgroundColor}
             hoverLeave={hoverLeave}
             hoverOn={hoverOn}
+            contactUs={contactUs}
           />
         </section>
       </div>

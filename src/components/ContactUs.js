@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-const ContactUs = props => {
-  const { hoverLeave, hoverOn } = props
-  const [socialBackground, setSocialBackground] = useState('fadeout')
+const ContactUs = (props) => {
+  const { hoverLeave, hoverOn, contactUs } = props;
+  const [socialBackground, setSocialBackground] = useState("fadeout");
 
   return (
     <>
       <div className="footer">
         <div id="blurSocialMedia" className={`${socialBackground}`} />
         <div
+          ref={contactUs}
           className="section-header"
           onMouseEnter={() => hoverOn()}
           onMouseLeave={() => hoverLeave()}
@@ -45,8 +46,8 @@ const ContactUs = props => {
                   href="https://www.behance.net/insignisdesign"
                   rel="noopener noreferrer"
                   target="_blank"
-                  onMouseEnter={() => setSocialBackground('fadein behance')}
-                  onMouseLeave={() => setSocialBackground('fadeout')}
+                  onMouseEnter={() => setSocialBackground("fadein behance")}
+                  onMouseLeave={() => setSocialBackground("fadeout")}
                 >
                   Behance
                 </a>
@@ -56,8 +57,8 @@ const ContactUs = props => {
                   href="https://dribbble.com/yuriorbital"
                   rel="noopener noreferrer"
                   target="_blank"
-                  onMouseEnter={() => setSocialBackground('fadein dribble')}
-                  onMouseLeave={() => setSocialBackground('fadeout')}
+                  onMouseEnter={() => setSocialBackground("fadein dribble")}
+                  onMouseLeave={() => setSocialBackground("fadeout")}
                 >
                   Dribble
                 </a>
@@ -67,8 +68,8 @@ const ContactUs = props => {
                   href="https://www.facebook.com/insigniscollective"
                   rel="noopener noreferrer"
                   target="_blank"
-                  onMouseEnter={() => setSocialBackground('fadein facebook')}
-                  onMouseLeave={() => setSocialBackground('fadeout')}
+                  onMouseEnter={() => setSocialBackground("fadein facebook")}
+                  onMouseLeave={() => setSocialBackground("fadeout")}
                 >
                   Facebook
                 </a>
@@ -78,8 +79,8 @@ const ContactUs = props => {
                   href="https://www.linkedin.com/company/42417318/"
                   rel="noopener noreferrer"
                   target="_blank"
-                  onMouseEnter={() => setSocialBackground('fadein facebook')}
-                  onMouseLeave={() => setSocialBackground('fadeout')}
+                  onMouseEnter={() => setSocialBackground("fadein facebook")}
+                  onMouseLeave={() => setSocialBackground("fadeout")}
                 >
                   Linkedin
                 </a>
@@ -89,7 +90,7 @@ const ContactUs = props => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;
