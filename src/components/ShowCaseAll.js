@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { TweenMax } from "gsap";
+import { TweenMax, Linear } from "gsap";
 import PropTypes from "prop-types";
 import ShowcaseProject from "./showcase/ShowcaseProject";
 import {
@@ -19,11 +19,12 @@ const ShowCaseAll = (props) => {
     setBrandTween(
       TweenMax.fromTo(
         "#showcases .brand, #showcases .mobile",
-        50,
+        15,
         { x: 0 },
         {
           x: -1500,
-          repeat: 1,
+          ease: Linear.easeNone,
+          repeat: -1,
         }
       )
     );
@@ -31,11 +32,12 @@ const ShowCaseAll = (props) => {
     setWebsiteTween(
       TweenMax.fromTo(
         "#showcases .websites, #showcases .motion",
-        50,
+        15,
         { x: -1500 },
         {
           x: 0,
-          repeat: 1,
+          ease: Linear.easeNone,
+          repeat: -1,
         }
       )
     );
