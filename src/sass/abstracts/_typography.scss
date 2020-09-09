@@ -1,63 +1,71 @@
 @font-face {
-    font-family: "Roboto-Bold";
-    src: url("../../assets/fonts/Roboto/Roboto-Bold.ttf");
+  font-family: "Roboto-Bold";
+  src: url("../../assets/fonts/Roboto/Roboto-Bold.ttf");
 }
 
 .main-header {
-    font-family: Roboto-Bold;
+  font-family: Roboto-Bold;
+  font-size: 100px;
+  line-height: 100px;
+  color: white;
+  letter-spacing: 0;
+  text-align: center;
+  position: relative;
+  z-index: 90;
+  padding: 2rem 10rem;
+
+  @include respond(tab-land) {
     font-size: 90px;
-    color: white;
-    letter-spacing: 0;
-    text-align: center;
     line-height: 90px;
-    position: relative;
-    z-index: 90;
-    padding: 14% 10% 2rem 10%;
+    padding: 5rem 3rem 1rem 3rem;
+  }
 
-    @include respond(tab-land) {
-        font-size: 80px;
-        padding: 5rem 3rem 1rem 3rem;
-    }
-
-    @include respond(phone) {
-        font-size: 50px;
-        line-height: 50px;
-        padding: 5rem 3rem 1rem 3rem;
-    }
+  @include respond(phone) {
+    font-size: 50px;
+    line-height: 50px;
+    padding: 5rem 3rem 1rem 3rem;
+  }
 }
 
 .section-header {
-    font-size: 75px;
-    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
+  font-size: 75px;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 
-    @include respond(phone) {
-        font-size: 35px;
-    }
+  @include respond(phone) {
+    font-size: 35px;
+  }
 }
 
-.brand, .websites, .mobile, .motion {
-    cursor: pointer;
-    clear: both;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
+.brand,
+.websites,
+.mobile,
+.motion {
+  cursor: pointer;
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.brand:hover, .websites:hover, .mobile:hover, .motion:hover {
-    -webkit-text-fill-color: white;
+.brand:hover,
+.websites:hover,
+.mobile:hover,
+.motion:hover {
+  -webkit-text-fill-color: white;
 }
 
 .and-more-section {
-    display: inline-block;
+  display: inline-block;
 
-    .plus, .and-more {
-        padding: 0 10px;
-        display: block;
-        float: left;
-        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-    }
+  .plus,
+  .and-more {
+    padding: 0 10px;
+    display: block;
+    float: left;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+  }
 }

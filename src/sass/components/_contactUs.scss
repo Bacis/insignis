@@ -23,15 +23,20 @@
 
   .section-header {
     cursor: pointer;
-    font-size: 120px;
+    font-size: 144px;
     line-height: 90px;
     padding-top: 50px;
     padding-bottom: 50px;
     z-index: 11;
 
     @include respond(tab-land) {
-      font-size: 50px;
-      line-height: 50px;
+      font-size: 60px;
+      line-height: 70px;
+    }
+
+    @include respond(phone) {
+      font-size: 56px;
+      line-height: 70px;
     }
   }
 
@@ -49,17 +54,28 @@
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
 
+    @include respond(phone) {
+      margin-top: 0;
+      width: 80%;
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+
     .column {
       display: block;
       margin-left: auto;
       margin-right: auto;
+
+      @include respond(phone) {
+        margin: 0;
+      }
 
       .city {
         font-size: 40px;
         letter-spacing: 0;
         line-height: 48px;
 
-        @include respond(tab-land) {
+        @include respond(phone) {
           font-size: 20px;
           line-height: 20px;
         }
@@ -71,8 +87,13 @@
         line-height: 40px;
 
         @include respond(tab-land) {
-          font-size: 12px;
-          line-height: 14px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        @include respond(phone) {
+          font-size: 14px;
+          line-height: 20px;
         }
       }
     }
@@ -95,6 +116,16 @@
         -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
+        @include respond(phone) {
+          position: absolute;
+          bottom: 0;
+          right: 45px;
+          width: auto;
+          -ms-grid-columns: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 15px;
+        }
+
         .social {
           display: block;
           margin-left: auto;
@@ -104,6 +135,10 @@
           letter-spacing: 0;
           line-height: 48px;
 
+          @include respond(phone) {
+            margin: 0;
+          }
+
           a {
             text-decoration: none;
             color: #fff;
@@ -112,6 +147,10 @@
 
           a:hover {
             font-size: 40px;
+
+            @include respond(phone) {
+              font-size: 18px;
+            }
           }
 
           @include respond(tab-land) {

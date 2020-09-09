@@ -13,6 +13,18 @@
   }
 
   .and-more-section {
-    font-size: 75px;
+    cursor: pointer;
+    font-size: 100px;
+    line-height: 100px;
+
+    @include respond(tab-land) {
+      font-size: 90px;
+      line-height: 90px;
+    }
+
+    @include respond(phone) {
+      font-size: 44px;
+      line-height: 44px;
+    }
   }
 }

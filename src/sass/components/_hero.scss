@@ -1,5 +1,7 @@
 #hero {
   height: 100vh;
+  display: grid;
+  place-items: center;
 
   .main-header {
     -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */

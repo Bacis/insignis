@@ -9,6 +9,10 @@
     justify-content: start;
     margin: 2rem 4rem;
 
+    @include respond(phone) {
+      margin: 1rem 2rem;
+    }
+
     .text {
       margin-left: 2rem;
       margin-right: 2rem;
@@ -22,6 +26,11 @@
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: white;
         transition: all ease-out 0.3s;
+
+        @include respond(phone) {
+          font-size: 26px;
+          line-height: 26px;
+        }
       }
 
       h1:hover {
@@ -30,6 +39,10 @@
 
       .info {
         font-size: 21px;
+
+        @include respond(phone) {
+          font-size: inherit;
+        }
       }
     }
 
@@ -43,6 +56,10 @@
       cursor: pointer;
       margin: 0 2rem;
       width: 0%;
+
+      @include respond(phone) {
+        margin: 0;
+      }
     }
   }
 
@@ -74,7 +91,12 @@
 
   .content-area {
     img {
-      width: 30%;
+      width: auto;
+      max-height: 241px;
+
+      @include respond(phone) {
+        max-height: 141px;
+      }
     }
   }
 }
