@@ -21,15 +21,16 @@ import "./sass/main.scss";
 
 gsap.registerPlugin(ScrollMagicPluginGsap);
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax, Back);
-TweenMax.defaultOverwrite = true;
+TweenMax.defaultOverwrite = false;
 
 const App = () => {
-  const controller = new ScrollMagic.Controller();
   const [backgroundColor, setBackgroundColor] = useState("");
   const [backgroundVideo, setBackgroundVideo] = useState("");
   const [videoRef, setVideoRef] = useState(null);
   const windowHeight = window.innerHeight;
   let contactUs = React.createRef();
+  let topPageRef = React.createRef();
+  let showCaseRef = React.createRef();
 
   useEffect(() => {
     setVideoRef(document.getElementById("blurVideo"));
@@ -61,10 +62,10 @@ const App = () => {
         height={windowHeight}
         width={window.innerWidth}
       />
-      <div className={`App default ${backgroundColor}`}>
+      <div ref={topPageRef} className={`App default ${backgroundColor}`}>
         <header className="App-header">
-          <TopMenu contactUs={contactUs} />
-          <SideMenu />
+          <TopMenu contactUs={contactUs} topPageRef={topPageRef} />
+          <SideMenu showCaseRef={showCaseRef} contactUsRef={contactUs} />
         </header>
         <section className="scroll-magic">
           <Hero
@@ -72,15 +73,15 @@ const App = () => {
                 creating outstanding"
           />
           <ShowCaseAll
+            showCaseRef={showCaseRef}
             setBackgroundColor={setBackgroundColor}
-            controller={controller}
             hoverLeave={hoverLeave}
             hoverOn={hoverOn}
           />
-          <AndMore controller={controller} />
+          <AndMore />
           <Label title="We bring your company fearlessly forward to realize products that are ahead of their time." />
           <Label title="We are" />
-          <LabelSlide controller={controller} />
+          <LabelSlide />
           <Team title="Our team has been selected by the best" />
           <Portfolio setBackgroundColor={setBackgroundColor} />
           <ContactUs

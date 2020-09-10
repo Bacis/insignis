@@ -1,148 +1,148 @@
 header {
-    .top-menu {
-        position: fixed;
-        width: 100%;
-        z-index: 100;
+  .top-menu {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 
-        ol {
-            margin: auto;
-            width: $grid-width;
+    ol {
+      margin: auto;
+      width: $grid-width;
 
-            @include respond(tab-land) {
-                width: 55rem;
-            }
+      @include respond(tab-land) {
+        width: 55rem;
+      }
 
-            @include respond(phone) {
-                width: 26rem;
-            }
+      @include respond(phone) {
+        width: 26rem;
+      }
 
-            li {
-                display: inline-block;
-                margin-top: 30px;
+      li {
+        display: inline-block;
+        margin-top: 30px;
 
-                @include respond(phone) {
-                    margin-top: 10px;
-                }
-            }
-    
-            .logo {
-                cursor: pointer;
-                float: left;
-                overflow-x: hidden;
-    
-                svg {
-                    transform: translateX(-185px);
-                    transition: transform ease-out 0.3s;
-
-                    @include respond(phone) {
-                        height: 30px;
-                        width: 110px;
-                        transform: translateX(-84px);
-                    }
-    
-                    path {
-                        opacity: 1;
-                    }
-                }
-            }
-            
-            .active {
-                svg {
-                    transform: translateX(0);
-    
-                    path {
-                        opacity: 1;
-                    }
-                }
-            }
+        @include respond(phone) {
+          margin-top: 10px;
         }
+      }
 
-        .contact-us {
-            cursor: pointer;
-            float: right;
-            margin-top: 20px;
+      .logo {
+        cursor: pointer;
+        float: left;
+        overflow-x: hidden;
 
-            @include respond(phone) {
-                margin-top: 10px;
-            }
+        svg {
+          transform: translateX(-185px);
+          transition: transform ease-out 0.3s;
 
-            .section-header {
-                font-size: 45px;
-                height: 60px;
+          @include respond(phone) {
+            height: 30px;
+            width: 110px;
+            transform: translateX(-84px);
+          }
 
-                @include respond(phone) {
-                    font-size: 20px;
-                }
-            }
+          path {
+            opacity: 1;
+          }
         }
+      }
 
-        .logo:hover {
-            width: 250px;
+      .active {
+        svg {
+          transform: translateX(0);
 
-            @include respond(phone) {
-                width: 110px;
-            }
+          path {
+            opacity: 1;
+          }
         }
+      }
     }
 
-    .side-menu {
-        position: fixed;
-        z-index: 100;
-        right: 0;
-        top: 20%;
+    .contact-us {
+      cursor: pointer;
+      float: right;
+      margin-top: 20px;
 
-        ol.right {
-            list-style: none;
-            font-size: 27px;
-            width: 122px;
-            margin-right: 25px;
-            overflow-x: hidden;
+      @include respond(phone) {
+        margin-top: 10px;
+      }
 
-            @include respond(phone) {
-                margin-right: 10px;
-            }
+      .section-header {
+        font-size: 45px;
+        height: 60px;
 
-            li {
-                cursor: pointer;
-                margin: 26px;
-                width: 30px;
-                transform: translateX(70px);
-                transition: transform ease-out 0.1s;
-            }
-
-            li::first-letter {
-                margin-right: 15px;
-            }
-
-            li:hover {
-                width: auto;
-                transform: translateX(0px)
-            }
-
-            li:hover::first-letter {
-                margin-right: 0;
-            }
+        @include respond(phone) {
+          font-size: 20px;
         }
+      }
     }
+
+    .logo:hover {
+      width: 250px;
+
+      @include respond(phone) {
+        width: 110px;
+      }
+    }
+  }
+
+  .side-menu {
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    top: 33%;
+
+    ol.right {
+      list-style: none;
+      font-size: 27px;
+      width: 122px;
+      margin-right: 25px;
+      overflow-x: hidden;
+
+      @include respond(phone) {
+        margin-right: 10px;
+      }
+
+      li {
+        cursor: pointer;
+        padding: 15px 26px;
+        width: 30px;
+        transform: translateX(70px);
+        transition: transform ease-out 0.1s;
+      }
+
+      li::first-letter {
+        margin-right: 15px;
+      }
+
+      li:hover {
+        width: auto;
+        transform: translateX(-2px);
+      }
+
+      li:hover::first-letter {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .scroll-magic {
-    overflow: hidden;
+  overflow: hidden;
 
-    .header-text {
-        position: relative;
-    }
+  .header-text {
+    position: relative;
+  }
 
-    .brand-text {
-        text-align: center;
-    }
+  .brand-text {
+    text-align: center;
+  }
 }
 
 .tween {
-    position: absolute;
-    opacity: 0;
-    max-width: 100%;
-    height: auto;
-    background-color: white;
-    transition: opacity;
+  position: absolute;
+  opacity: 0;
+  max-width: 100%;
+  height: auto;
+  background-color: white;
+  transition: opacity;
 }

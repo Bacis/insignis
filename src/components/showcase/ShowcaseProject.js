@@ -27,8 +27,9 @@ const ShowcaseProject = (props) => {
         {title}
       </div>
       <div className={`brand-portfolio ${toggleShowcase}`}>
-        {projects.map((project) => (
+        {projects.map((project, key) => (
           <div
+            key={key}
             className={`content-area ${
               project.floatLeft ? "start" : "flexEnd"
             }`}
@@ -114,10 +115,7 @@ const ShowcaseProject = (props) => {
 
 ShowcaseProject.propTypes = {
   setBackgroundColor: PropTypes.func.isRequired,
-  projects: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
-  }).isRequired,
+  projects: PropTypes.array.isRequired,
 };
 
 export default ShowcaseProject;

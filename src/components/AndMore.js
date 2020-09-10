@@ -3,8 +3,10 @@ import PropTypes from "prop-types";
 import { TweenMax } from "gsap";
 import * as ScrollMagic from "scrollmagic";
 
-const AndMore = (props) => {
-  const { controller } = props;
+TweenMax.defaultOverwrite = false;
+
+const AndMore = () => {
+  const controller = new ScrollMagic.Controller();
 
   useEffect(() => {
     new ScrollMagic.Scene({

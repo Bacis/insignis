@@ -10,8 +10,7 @@ import {
 } from "../utils";
 
 const ShowCaseAll = (props) => {
-  const { setBackgroundColor } = props;
-
+  const { setBackgroundColor, showCaseRef } = props;
   const [brandTween, setBrandTween] = useState(null);
   const [websiteTween, setWebsiteTween] = useState(null);
 
@@ -58,7 +57,7 @@ const ShowCaseAll = (props) => {
   };
 
   return (
-    <div id="showcases">
+    <div id="showcases" ref={showCaseRef}>
       <ShowcaseProject
         title="Brand identities / Brand identities / Brand identities / Brand
         identities / Brand identities / Brand identities"
@@ -101,10 +100,6 @@ const ShowCaseAll = (props) => {
 
 ShowCaseAll.propTypes = {
   setBackgroundColor: PropTypes.func.isRequired,
-  controller: PropTypes.shape({
-    addScene: PropTypes.func.isRequired,
-    removeScene: PropTypes.func.isRequired,
-  }).isRequired,
   hoverLeave: PropTypes.func.isRequired,
   hoverOn: PropTypes.func.isRequired,
 };

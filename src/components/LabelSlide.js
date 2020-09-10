@@ -1,36 +1,36 @@
-import React, { useEffect } from 'react'
-import { TweenMax, TimelineMax } from 'gsap'
-import PropTypes from 'prop-types'
-import * as ScrollMagic from 'scrollmagic'
+import React, { useEffect } from "react";
+import { TweenMax, TimelineMax } from "gsap";
+import PropTypes from "prop-types";
+import * as ScrollMagic from "scrollmagic";
 
-const LabelSlide = props => {
-  const { controller } = props
+const LabelSlide = () => {
+  const controller = new ScrollMagic.Controller();
 
   useEffect(() => {
-    const slideTimeline = new TimelineMax()
+    const slideTimeline = new TimelineMax();
     const slideTween = TweenMax.fromTo(
-      '.labelSlideOverlay',
+      ".labelSlideOverlay",
       4,
-      { width: '120%' },
-      { width: '0%' }
-    )
+      { width: "120%" },
+      { width: "0%" }
+    );
 
     const textIncreaseTween = TweenMax.fromTo(
-      '.label-slide-pin .title',
+      ".label-slide-pin .title",
       8,
       { scale: 1 },
       { scale: 20, delay: 8 }
-    )
+    );
 
-    slideTimeline.add([slideTween, textIncreaseTween])
+    slideTimeline.add([slideTween, textIncreaseTween]);
 
     new ScrollMagic.Scene({
-      triggerElement: '#label-slide-pin',
+      triggerElement: "#label-slide-pin",
       duration: 1000,
     })
       .setTween(slideTimeline)
-      .addTo(controller)
-  })
+      .addTo(controller);
+  });
 
   return (
     <div className="label-area">
@@ -41,14 +41,14 @@ const LabelSlide = props => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 LabelSlide.propTypes = {
   controller: PropTypes.shape({
     addScene: PropTypes.func.isRequired,
     removeScene: PropTypes.func.isRequired,
   }).isRequired,
-}
+};
 
-export default LabelSlide
+export default LabelSlide;

@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import { ReactComponent as Logo } from "../assets/images/insignis-logo.svg";
 
 const TopMenu = (props) => {
-  const { contactUs } = props;
+  const { contactUs, topPageRef } = props;
   const [logoHover, setLogoHover] = useState("");
 
   const scrollToBottom = () => {
     contactUs.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToTop = () => {
+    topPageRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -14,6 +18,7 @@ const TopMenu = (props) => {
       <ol>
         <li
           className={`logo ${logoHover}`}
+          onClick={() => scrollToTop()}
           onMouseEnter={() => setLogoHover("active")}
           onMouseLeave={() => setLogoHover("inactive")}
         >
