@@ -35,28 +35,66 @@ const ShowcaseProject = (props) => {
           >
             {project.floatLeft ? (
               <>
-                <img
-                  key={project.alt}
-                  src={project.src}
-                  alt={project.alt}
-                  onMouseEnter={() => setBackgroundColor(project.hoverKey)}
-                  onMouseLeave={() => setBackgroundColor("")}
-                />
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    key={project.alt}
+                    src={project.src}
+                    alt={project.alt}
+                    onMouseEnter={() => setBackgroundColor(project.hoverKey)}
+                    onMouseLeave={() => setBackgroundColor("")}
+                  />
+                </a>
                 <div className="text">
-                  <h1>{project.title}</h1>
+                  <h1>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.title}
+                    </a>
+                  </h1>
                   <div className="info">
                     <div className="see-more"></div>
-                    <div className="label">{project.info}</div>
+                    <div className="label">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.info}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </>
             ) : (
               <>
                 <div className="text alignRight">
-                  <h1>{project.title}</h1>
+                  <h1>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.title}
+                    </a>
+                  </h1>
                   <div className="info">
                     <div className="see-more"></div>
-                    <div className="label">{project.info}</div>
+                    <div className="label">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.info}
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <img

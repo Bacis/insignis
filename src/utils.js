@@ -5,14 +5,14 @@ import dzineElements from "./assets/images/DzineElements.jpg";
 import jts from "./assets/images/JTS.png";
 
 /* Motion graphics images */
-import motionImg from "./assets/images/B-duck.jpg";
-import motionImg1 from "./assets/images/Virgin-motion.jpg";
-import motionImg2 from "./assets/images/oppo-c.jpg";
-import motionImg3 from "./assets/images/Lakers.jpg";
+import bDuckImg from "./assets/images/B-duck.jpg";
+import virginMotionImg from "./assets/images/Virgin-motion.jpg";
+import oppoCImg from "./assets/images/oppo-c.jpg";
+import lakersImg from "./assets/images/Lakers.jpg";
 
 /* Mobile apps */
-import mobileImg from "./assets/images/mosquee-app.jpg";
-import mobileImg1 from "./assets/images/sbm-c.jpg";
+import mosqueeAppImg from "./assets/images/mosquee-app.jpg";
+import sbmCImg from "./assets/images/sbm-c.jpg";
 
 /* Websites */
 import eclipseImg from "./assets/images/eclipse-c.png";
@@ -23,35 +23,41 @@ import tattooInkImg from "./assets/images/tattoo-ink.png";
 export const websiteProjects = [
   {
     src: eclipseImg,
-    alt: "eclipse",
-    hoverKey: "day-one",
-    title: "Eclipse",
+    alt: "eclipse rave",
+    hoverKey: "eclipseRave",
+    title: "Eclipse Rave",
     info: "See more",
     floatLeft: true,
+    link:
+      "https://www.behance.net/gallery/81382971/Eclipse-rave-2019-website-and-ux",
   },
   {
     src: medicineHelpImg,
-    alt: "medicine help alt text",
-    hoverKey: "pier13",
+    alt: "medicine help",
+    hoverKey: "getAMedical",
     title: "Medicine help",
     info: "See more",
     floatLeft: false,
+    link: "https://www.behance.net/gallery/78841063/medicine-help",
   },
   {
     src: perfectWellnessImg,
     alt: "perfect wellness",
-    hoverKey: "dzineElement",
+    hoverKey: "perfectWellness",
     title: "Perfect wellness",
     info: "See more",
     floatLeft: true,
+    link:
+      "https://www.behance.net/gallery/99386267/Marketing-website-for-corporate-agency-Perfect-Wellness",
   },
   {
     src: tattooInkImg,
-    alt: "Jts alt text",
-    hoverKey: "jscSeries",
+    alt: "Tattoo Ink",
+    hoverKey: "tattooInk",
     title: "Tattoo Ink",
     info: "See more",
     floatLeft: false,
+    link: "https://www.behance.net/gallery/76034975/Tattoo-Ink",
   },
 ];
 
@@ -63,6 +69,8 @@ export const brandProjects = [
     title: "Day one",
     info: "See more",
     floatLeft: true,
+    link:
+      "https://www.behance.net/gallery/92458789/Rebranding-for-communication-and-strategy-agency-Logo",
   },
   {
     src: pier13,
@@ -71,6 +79,7 @@ export const brandProjects = [
     title: "Pier13",
     info: "See more",
     floatLeft: false,
+    link: "https://www.behance.net/gallery/43483401/Pier-13",
   },
   {
     src: dzineElements,
@@ -79,6 +88,8 @@ export const brandProjects = [
     title: "Dzine Elements",
     info: "See more",
     floatLeft: true,
+    link:
+      "https://www.behance.net/gallery/75717057/Logo-and-brand-guidelines-for-corporate-agency",
   },
   {
     src: jts,
@@ -87,59 +98,67 @@ export const brandProjects = [
     title: "Jsc Series",
     info: "See more",
     floatLeft: false,
+    link:
+      "https://www.behance.net/gallery/75291737/Branding-for-the-techno-label-JT-Series",
   },
 ];
 
 export const motionShowcaseImages = [
   {
-    src: motionImg,
-    alt: "Image alt motion 1",
-    hoverKey: "blue",
-    title: "Motion",
+    src: bDuckImg,
+    alt: "B Duck",
+    hoverKey: "bduck",
+    title: "B Duck",
     info: "See more",
     floatLeft: true,
+    link: "https://vimeo.com/366186033",
   },
   {
-    src: motionImg1,
-    alt: "Image alt motion 2",
-    hoverKey: "blue",
-    title: "Motion",
+    src: virginMotionImg,
+    alt: "Virgin Red",
+    hoverKey: "virginRed",
+    title: "Virgin Red",
     info: "See more",
     floatLeft: false,
+    link: "https://www.behance.net/gallery/44958089/Virgin-Red",
   },
   {
-    src: motionImg2,
-    alt: "Image alt motion 3",
-    hoverKey: "blue",
-    title: "Motion",
+    src: oppoCImg,
+    alt: "Oppo C",
+    hoverKey: "oppoC",
+    title: "Oppo C",
     info: "See more",
     floatLeft: true,
+    link: "https://www.behance.net/gallery/86468649/Oppo-Vooc",
   },
   {
-    src: motionImg3,
-    alt: "Image alt motion 4",
-    hoverKey: "blue",
-    title: "Motion",
+    src: lakersImg,
+    alt: "lakers",
+    hoverKey: "lakers",
+    title: "Lakers",
     info: "See more",
     floatLeft: false,
+    link: "https://www.behance.net/gallery/72305717/-KOBE-BRYANT-Booktrailer",
   },
 ];
 
 export const mobileShowcaseImages = [
   {
-    src: mobileImg,
-    alt: "Image alt mobile 1",
-    hoverKey: "blue",
-    title: "Motion",
+    src: mosqueeAppImg,
+    alt: "mosquee app",
+    hoverKey: "mosqueApp",
+    title: "Mosque App",
     info: "See more",
     floatLeft: true,
+    link: "https://www.behance.net/gallery/77896619/mosque-application",
   },
   {
-    src: mobileImg1,
-    alt: "Image alt mobile 2",
-    hoverKey: "blue",
-    title: "Motion",
+    src: sbmCImg,
+    alt: "sbm",
+    hoverKey: "sbm",
+    title: "SBM",
     info: "See more",
     floatLeft: false,
+    link: "https://www.behance.net/gallery/69676941/SBM",
   },
 ];
