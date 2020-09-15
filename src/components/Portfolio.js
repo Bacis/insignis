@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-const Portfolio = props => {
-  const { setBackgroundColor } = props
+const Portfolio = (props) => {
+  const { setBackgroundColor } = props;
 
   return (
     <div className="portfolio">
@@ -13,28 +13,28 @@ const Portfolio = props => {
           </div>
           <div
             className="section-header"
-            onMouseEnter={() => setBackgroundColor('behance')}
-            onMouseLeave={() => setBackgroundColor('')}
+            onMouseEnter={() => setBackgroundColor("behance")}
+            onMouseLeave={() => setBackgroundColor("")}
           >
             behance
           </div>
           <div>and</div>
           <div
             className="section-header"
-            onMouseEnter={() => setBackgroundColor('dribble')}
-            onMouseLeave={() => setBackgroundColor('')}
+            onMouseEnter={() => setBackgroundColor("dribble")}
+            onMouseLeave={() => setBackgroundColor("")}
           >
-            dribble
+            dribbble
           </div>
           <div>or just</div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Portfolio.propTypes = {
   setBackgroundColor: PropTypes.func.isRequired,
-}
+};
 
-export default Portfolio
+export default Portfolio;

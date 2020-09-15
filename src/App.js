@@ -80,7 +80,6 @@ const App = () => {
           />
           <AndMore />
           <Label title="We bring your company fearlessly forward to realize products that are ahead of their time." />
-          <Label title="We are" />
           <LabelSlide />
           <Team title="Our team has been selected by the best" />
           <Portfolio setBackgroundColor={setBackgroundColor} />

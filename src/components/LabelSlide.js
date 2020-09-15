@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { TweenMax, TimelineMax } from "gsap";
 import PropTypes from "prop-types";
 import * as ScrollMagic from "scrollmagic";
+import Label from "./Label";
 
 const LabelSlide = () => {
   const controller = new ScrollMagic.Controller();
@@ -10,7 +11,7 @@ const LabelSlide = () => {
     const slideTimeline = new TimelineMax();
     const slideTween = TweenMax.fromTo(
       ".labelSlideOverlay",
-      4,
+      8,
       { width: "120%" },
       { width: "0%" }
     );
@@ -18,28 +19,43 @@ const LabelSlide = () => {
     const textIncreaseTween = TweenMax.fromTo(
       ".label-slide-pin .title",
       8,
-      { scale: 1 },
-      { scale: 20, delay: 8 }
+      {
+        css: {
+          transform: "scale(1) translateZ(0)",
+          transition: "transform 0.5s ease-out",
+        },
+      },
+      {
+        css: {
+          transform: "scale(80, 90) translateZ(0)",
+          transition: "transform 0.5s ease-out",
+        },
+        delay: 8,
+      }
     );
 
     slideTimeline.add([slideTween, textIncreaseTween]);
 
     new ScrollMagic.Scene({
-      triggerElement: "#label-slide-pin",
-      duration: 1000,
+      triggerElement: "#label-pin",
+      duration: 4000,
     })
       .setTween(slideTimeline)
       .addTo(controller);
   });
 
   return (
-    <div className="label-area">
-      <div id="label-slide-pin">
-        <div className="labelSlideOverlay" />
-        <div className="label-slide-pin">
-          <div className="title">insignis</div>
+    <div className="label-container">
+      <Label title="We are" />
+      <div className="label-area">
+        <div className="label-slide">
+          <div className="labelSlideOverlay" />
+          <div className="label-slide-pin">
+            <div className="title">insignis</div>
+          </div>
         </div>
       </div>
+      <div id="label-pin"></div>
     </div>
   );
 };

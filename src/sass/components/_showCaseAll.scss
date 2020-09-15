@@ -1,106 +1,103 @@
-.brand-portfolio {
-  opacity: 0;
+.showcase-project {
   overflow: hidden;
-  height: 0;
-  transition: opacity ease-in-out 1s;
 
-  .content-area {
-    display: flex;
-    justify-content: start;
-    margin: 2rem 4rem;
+  .section-header {
+    width: auto;
+  }
 
-    @include respond(phone) {
-      margin: 1rem 2rem;
-    }
+  .brand-portfolio {
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    max-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all ease-in-out 1s;
 
-    .text {
-      margin-left: 2rem;
-      margin-right: 2rem;
-      margin-top: auto;
-      margin-bottom: auto;
-
-      h1 {
-        cursor: pointer;
-        font-size: 50px;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        transition: all ease-out 0.3s;
-
-        @include respond(phone) {
-          font-size: 26px;
-          line-height: 26px;
-        }
-
-        a {
-          text-decoration: none;
-          color: inherit;
-        }
-      }
-
-      h1:hover {
-        -webkit-text-fill-color: white;
-      }
-
-      .info {
-        font-size: 21px;
-
-        @include respond(phone) {
-          font-size: inherit;
-        }
-      }
-    }
-
-    .alignRight {
-      h1 {
-        text-align: right;
-      }
-    }
-
-    img {
-      cursor: pointer;
-      margin: 0 2rem;
-      width: 0%;
+    .content-area {
+      display: flex;
+      justify-content: flex-start;
+      margin: 2rem 4rem;
 
       @include respond(phone) {
-        margin: 0;
+        margin: 1rem 2rem;
       }
+
+      .text {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        h1 {
+          cursor: pointer;
+          font-size: 50px;
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: white;
+          transition: all ease-out 0.3s;
+
+          @include respond(phone) {
+            font-size: 26px;
+            line-height: 26px;
+          }
+
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+
+        h1:hover {
+          -webkit-text-fill-color: white;
+        }
+
+        .info {
+          font-size: 21px;
+
+          @include respond(phone) {
+            font-size: inherit;
+          }
+        }
+      }
+
+      .alignRight {
+        h1 {
+          text-align: right;
+        }
+      }
+
+      img {
+        cursor: pointer;
+        margin: 0 2rem;
+        width: 0%;
+
+        @include respond(phone) {
+          margin: 0;
+        }
+      }
+    }
+
+    .flexEnd {
+      justify-content: flex-end;
     }
   }
 
-  .flexEnd {
-    justify-content: flex-end;
-  }
-}
-
-.brand-ids {
-  .brand-open {
+  .open-showcase {
     opacity: 1;
     height: auto;
+    max-width: 1200px;
     position: relative;
     overflow: visible;
 
     .content-area {
       img {
-        width: 30%;
-      }
-    }
-  }
-}
+        width: auto;
+        max-height: 241px;
 
-.open-showcase {
-  opacity: 1;
-  height: auto;
-  position: relative;
-  overflow: visible;
-
-  .content-area {
-    img {
-      width: auto;
-      max-height: 241px;
-
-      @include respond(phone) {
-        max-height: 141px;
+        @include respond(phone) {
+          max-height: 141px;
+        }
       }
     }
   }

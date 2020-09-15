@@ -60,7 +60,7 @@ const ContactUs = (props) => {
                   onMouseEnter={() => setSocialBackground("fadein dribble")}
                   onMouseLeave={() => setSocialBackground("fadeout")}
                 >
-                  Dribble
+                  Dribbble
                 </a>
               </div>
               <div className="social">

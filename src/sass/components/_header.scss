@@ -28,6 +28,7 @@ header {
       .logo {
         cursor: pointer;
         float: left;
+        width: auto;
         overflow-x: hidden;
 
         svg {
@@ -60,6 +61,7 @@ header {
     .contact-us {
       cursor: pointer;
       float: right;
+      width: auto;
       margin-top: 20px;
 
       @include respond(phone) {
@@ -86,17 +88,17 @@ header {
   }
 
   .side-menu {
-    position: fixed;
-    z-index: 100;
-    right: 0;
-    top: 33%;
-
     ol.right {
+      float: right;
       list-style: none;
       font-size: 27px;
       width: 122px;
       margin-right: 25px;
       overflow-x: hidden;
+      position: fixed;
+      z-index: 100;
+      right: 0;
+      top: 33%;
 
       @include respond(phone) {
         margin-right: 10px;
@@ -127,8 +129,6 @@ header {
 }
 
 .scroll-magic {
-  overflow: hidden;
-
   .header-text {
     position: relative;
   }
