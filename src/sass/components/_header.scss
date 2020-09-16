@@ -36,9 +36,9 @@ header {
           transition: transform ease-out 0.3s;
 
           @include respond(phone) {
-            height: 30px;
-            width: 110px;
-            transform: translateX(-84px);
+            height: 60px;
+            width: 210px;
+            transform: translateX(-161px);
           }
 
           path {
@@ -64,16 +64,16 @@ header {
       width: auto;
       margin-top: 20px;
 
-      @include respond(phone) {
-        margin-top: 10px;
-      }
-
       .section-header {
         font-size: 45px;
         height: 60px;
 
         @include respond(phone) {
-          font-size: 20px;
+          font-size: 27px;
+        }
+
+        a {
+          text-decoration: none;
         }
       }
     }
@@ -82,7 +82,7 @@ header {
       width: 250px;
 
       @include respond(phone) {
-        width: 110px;
+        width: 210px;
       }
     }
   }
@@ -101,7 +101,7 @@ header {
       top: 33%;
 
       @include respond(phone) {
-        margin-right: 10px;
+        display: none;
       }
 
       li {

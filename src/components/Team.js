@@ -14,10 +14,10 @@ import dzine from "../assets/images/dzine.svg";
 import dayOne from "../assets/images/dayOne.svg";
 
 const Team = (props) => {
-  const { title } = props;
+  const { title, clientsRef } = props;
 
   return (
-    <div className="team">
+    <div ref={clientsRef} className="team">
       <div className="row">
         <div className="title">{title}</div>
         <div className="container">

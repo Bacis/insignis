@@ -55,6 +55,8 @@ const ShowcaseProject = (props) => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onMouseEnter={() => setBackgroundColor(project.hoverKey)}
+                      onMouseLeave={() => setBackgroundColor("")}
                     >
                       {project.title}
                     </a>
@@ -81,6 +83,8 @@ const ShowcaseProject = (props) => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onMouseEnter={() => setBackgroundColor(project.hoverKey)}
+                      onMouseLeave={() => setBackgroundColor("")}
                     >
                       {project.title}
                     </a>

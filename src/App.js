@@ -31,6 +31,8 @@ const App = () => {
   let contactUs = React.createRef();
   let topPageRef = React.createRef();
   let showCaseRef = React.createRef();
+  let visionRef = React.createRef();
+  let clientsRef = React.createRef();
 
   useEffect(() => {
     setVideoRef(document.getElementById("blurVideo"));
@@ -64,8 +66,19 @@ const App = () => {
       />
       <div ref={topPageRef} className={`App default ${backgroundColor}`}>
         <header className="App-header">
-          <TopMenu contactUs={contactUs} topPageRef={topPageRef} />
-          <SideMenu showCaseRef={showCaseRef} contactUsRef={contactUs} />
+          <TopMenu
+            contactUs={contactUs}
+            topPageRef={topPageRef}
+            hoverLeave={hoverLeave}
+            hoverOn={hoverOn}
+          />
+          <SideMenu
+            clientsRef={clientsRef}
+            visionRef={visionRef}
+            topPageRef={topPageRef}
+            showCaseRef={showCaseRef}
+            contactUsRef={contactUs}
+          />
         </header>
         <section className="scroll-magic">
           <Hero
@@ -79,9 +92,15 @@ const App = () => {
             hoverOn={hoverOn}
           />
           <AndMore />
-          <Label title="We bring your company fearlessly forward to realize products that are ahead of their time." />
+          <Label
+            visionRef={visionRef}
+            title="We bring your company fearlessly forward to realize products that are ahead of their time."
+          />
           <LabelSlide />
-          <Team title="Our team has been selected by the best" />
+          <Team
+            clientsRef={clientsRef}
+            title="Our team has been selected by the best"
+          />
           <Portfolio setBackgroundColor={setBackgroundColor} />
           <ContactUs
             setBackgroundColor={setBackgroundColor}

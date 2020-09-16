@@ -14,7 +14,7 @@ const ContactUs = (props) => {
           onMouseEnter={() => hoverOn()}
           onMouseLeave={() => hoverLeave()}
         >
-          Contact us
+          <a href="mailto:hello@insignis.design">Contact us</a>
         </div>
         <div className="grid-footer">
           <div className="column">
