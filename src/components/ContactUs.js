@@ -65,6 +65,17 @@ const ContactUs = (props) => {
               </div>
               <div className="social">
                 <a
+                  href="https://github.com/Bacis/insignis"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  onMouseEnter={() => setSocialBackground("fadein github")}
+                  onMouseLeave={() => setSocialBackground("fadeout")}
+                >
+                  Github
+                </a>
+              </div>
+              <div className="social">
+                <a
                   href="https://www.facebook.com/insigniscollective"
                   rel="noopener noreferrer"
                   target="_blank"

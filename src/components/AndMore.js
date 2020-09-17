@@ -1,13 +1,9 @@
 import React, { useEffect } from "react";
-import PropTypes from "prop-types";
 import { TweenMax } from "gsap";
 import * as ScrollMagic from "scrollmagic";
 
-TweenMax.defaultOverwrite = false;
-
 const AndMore = () => {
   const controller = new ScrollMagic.Controller();
-
   useEffect(() => {
     new ScrollMagic.Scene({
       triggerElement: "#and-more",
@@ -72,13 +68,6 @@ const AndMore = () => {
       </div>
     </div>
   );
-};
-
-AndMore.propTypes = {
-  controller: PropTypes.shape({
-    addScene: PropTypes.func.isRequired,
-    removeScene: PropTypes.func.isRequired,
-  }).isRequired,
 };
 
 export default AndMore;

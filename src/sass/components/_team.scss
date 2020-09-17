@@ -30,6 +30,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
+      @include respond(phone) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
       img {
         cursor: pointer;
         opacity: 0.3;

@@ -1,6 +1,10 @@
 .label-container {
   height: 400vw;
 
+  @include respond(phone) {
+    height: 400vh;
+  }
+
   .labelSlideOverlay {
     position: absolute;
     width: 100%;
@@ -20,6 +24,10 @@
   .label-area {
     position: sticky;
     top: 120px;
+
+    @include respond(phone) {
+      top: 270px;
+    }
 
     .label-slide {
       position: relative;
