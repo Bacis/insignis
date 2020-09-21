@@ -9,7 +9,7 @@ const Portfolio = (props) => {
       <div className="row">
         <div className="title">
           <div>
-            While we work on our website you can take a look at our works on
+            While we work on our website you can take a look at our work on
           </div>
           <div
             className="section-header"
@@ -19,13 +19,13 @@ const Portfolio = (props) => {
             behance
           </div>
           <div>and</div>
-          <div
+          <span
             className="section-header"
             onMouseEnter={() => setBackgroundColor("dribble")}
             onMouseLeave={() => setBackgroundColor("")}
           >
             dribbble
-          </div>
+          </span>
           <div>or just</div>
         </div>
       </div>

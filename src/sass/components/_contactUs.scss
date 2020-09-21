@@ -42,6 +42,10 @@
     a {
       text-decoration: none;
     }
+
+    a:hover {
+      -webkit-text-fill-color: white;
+    }
   }
 
   .grid-footer {

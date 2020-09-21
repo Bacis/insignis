@@ -40,16 +40,22 @@ const App = () => {
 
   const hoverLeave = () => {
     if (videoRef) {
-      videoRef.pause();
       setBackgroundVideo("fadeout");
     }
   };
 
   const hoverOn = () => {
-    if (videoRef) {
-      videoRef.play();
-      setBackgroundVideo("fadein");
+    if (videoRef !== undefined) {
+      videoRef
+        .play()
+        .then((_) => {
+          // Autoplay started!
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
+    setBackgroundVideo("fadein");
   };
 
   return (
@@ -59,6 +65,7 @@ const App = () => {
         type="video/mp4"
         id="blurVideo"
         loop
+        muted
         preload="none"
         className={`${backgroundVideo}`}
         height={windowHeight}
@@ -83,7 +90,7 @@ const App = () => {
         <section className="scroll-magic">
           <Hero
             title="We are a group of independent designers and developers focused on
-                creating outstanding"
+                creating outstanding brand identities"
           />
           <ShowCaseAll
             showCaseRef={showCaseRef}
@@ -94,7 +101,7 @@ const App = () => {
           <AndMore />
           <Label
             visionRef={visionRef}
-            title="We bring your company fearlessly forward to realize products that are ahead of their time."
+            title="We bring your company fearlessly forward to build products that are ahead of their time."
           />
           <LabelSlide />
           <Team
