@@ -41,7 +41,7 @@ const LabelSlide = () => {
     })
       .setTween(slideTimeline)
       .addTo(controller);
-  });
+  }, []);
 
   return (
     <div className="label-container">
